@@ -5,6 +5,7 @@ import lombok.Getter;
 import lombok.ToString;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.redis.core.RedisHash;
+import org.springframework.data.redis.core.index.Indexed;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
@@ -15,12 +16,17 @@ import java.time.LocalDateTime;
 public class AvailablePoint implements Serializable {
     @Id
     private String id;
+
+    @Indexed
+    private String userName;
+
     private Long point;
     private LocalDateTime refreshTime;
 
     @Builder
-    public AvailablePoint(String id, Long point, LocalDateTime refreshTime) {
+    public AvailablePoint(String id, String userName, Long point, LocalDateTime refreshTime) {
         this.id = id;
+        this.userName = userName;
         this.point = point;
         this.refreshTime = refreshTime;
     }
