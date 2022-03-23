@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">1.436s</div>
+<div class="counter">1.383s</div>
 <p>duration</p>
 </div>
 </td>
@@ -69,21 +69,24 @@
 <li>
 <a href="#tab2">Standard output</a>
 </li>
+<li>
+<a href="#tab3">Standard error</a>
+</li>
 </ul>
 <div id="tab0" class="tab">
 <h2>Failed tests</h2>
 <div class="test">
-<a name="procBuyIncrement_transactionTest()"></a>
-<h3 class="failures">procBuyIncrement_transactionTest()</h3>
+<a name="procBuyIncrement_multiTest()"></a>
+<h3 class="failures">대량건의 제고증가 테스트</h3>
 <span class="code">
 <pre>org.opentest4j.AssertionFailedError: 
 expected: 1000L
- but was: 10L
+ but was: 1120L
 	at java.base@17.0.2/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base@17.0.2/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
 	at java.base@17.0.2/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
 	at java.base@17.0.2/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at app//com.example.redis.service.ProductQuantityServiceTest.procBuyIncrement_transactionTest(ProductQuantityServiceTest.java:162)
+	at app//com.example.redis.service.ProductQuantityServiceTest.procBuyIncrement_multiTest(ProductQuantityServiceTest.java:114)
 	at java.base@17.0.2/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base@17.0.2/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base@17.0.2/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -177,13 +180,15 @@ expected: 1000L
 <thead>
 <tr>
 <th>Test</th>
+<th>Method name</th>
 <th>Duration</th>
 <th>Result</th>
 </tr>
 </thead>
 <tr>
-<td class="failures">procBuyIncrement_transactionTest()</td>
-<td class="failures">1.436s</td>
+<td class="failures">대량건의 제고증가 테스트</td>
+<td class="failures">procBuyIncrement_multiTest()</td>
+<td class="failures">1.383s</td>
 <td class="failures">failed</td>
 </tr>
 </table>
@@ -191,21 +196,21 @@ expected: 1000L
 <div id="tab2" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>18:06:26.208 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
-18:06:26.212 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
-18:06:26.226 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [com.example.redis.service.ProductQuantityServiceTest] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
-18:06:26.231 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.example.redis.service.ProductQuantityServiceTest], using SpringBootContextLoader
-18:06:26.232 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.example.redis.service.ProductQuantityServiceTest]: class path resource [com/example/redis/service/ProductQuantityServiceTest-context.xml] does not exist
-18:06:26.233 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.example.redis.service.ProductQuantityServiceTest]: class path resource [com/example/redis/service/ProductQuantityServiceTestContext.groovy] does not exist
-18:06:26.233 [Test worker] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.example.redis.service.ProductQuantityServiceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
-18:06:26.233 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.example.redis.service.ProductQuantityServiceTest]: ProductQuantityServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-18:06:26.253 [Test worker] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [com.example.redis.service.ProductQuantityServiceTest]
-18:06:26.279 [Test worker] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [/Users/lf/Works/demo/redis/build/classes/java/main/com/example/redis/RedisApplication.class]
-18:06:26.280 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.example.redis.RedisApplication for test class com.example.redis.service.ProductQuantityServiceTest
-18:06:26.318 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [com.example.redis.service.ProductQuantityServiceTest]: using defaults.
-18:06:26.318 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
-18:06:26.324 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@1bc715b8, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@292d1c71, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@2b491fee, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@3f1c5af9, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@1c55f277, org.springframework.test.context.support.DirtiesContextTestExecutionListener@5ddabb18, org.springframework.test.context.transaction.TransactionalTestExecutionListener@3e8f7922, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@63192798, org.springframework.test.context.event.EventPublishingTestExecutionListener@50eca7c6, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@58e6d4b8, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@1de5f0ef, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@376a312c, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@28d6290, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@6ca0256d, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@5ef0d29e]
-18:06:26.326 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@44e3760b testClass = ProductQuantityServiceTest, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@6a66a204 testClass = ProductQuantityServiceTest, locations = '{}', classes = '{class com.example.redis.RedisApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@4b40f651, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@336f1079, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@4b79ac84, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@21fd5faa, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@40db2a24, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@28975c28], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -&gt; true]], class annotated with @DirtiesContext [false] with mode [null].
+<pre>14:18:06.397 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+14:18:06.401 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+14:18:06.414 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [com.example.redis.service.ProductQuantityServiceTest] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
+14:18:06.418 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.example.redis.service.ProductQuantityServiceTest], using SpringBootContextLoader
+14:18:06.420 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.example.redis.service.ProductQuantityServiceTest]: class path resource [com/example/redis/service/ProductQuantityServiceTest-context.xml] does not exist
+14:18:06.420 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.example.redis.service.ProductQuantityServiceTest]: class path resource [com/example/redis/service/ProductQuantityServiceTestContext.groovy] does not exist
+14:18:06.420 [Test worker] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.example.redis.service.ProductQuantityServiceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+14:18:06.420 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.example.redis.service.ProductQuantityServiceTest]: ProductQuantityServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+14:18:06.439 [Test worker] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [com.example.redis.service.ProductQuantityServiceTest]
+14:18:06.464 [Test worker] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [/Users/lf/Works/demo/redis/build/classes/java/main/com/example/redis/RedisApplication.class]
+14:18:06.465 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.example.redis.RedisApplication for test class com.example.redis.service.ProductQuantityServiceTest
+14:18:06.497 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [com.example.redis.service.ProductQuantityServiceTest]: using defaults.
+14:18:06.497 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+14:18:06.506 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@6731787b, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@16f7b4af, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@7adf16aa, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@34a1d21f, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@58bf8650, org.springframework.test.context.support.DirtiesContextTestExecutionListener@73c60324, org.springframework.test.context.transaction.TransactionalTestExecutionListener@71ae31b0, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@4ba534b0, org.springframework.test.context.event.EventPublishingTestExecutionListener@6f0ca692, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@2c104774, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@2cb3d0f7, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@4e517165, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@44e3760b, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@6a66a204, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@5860f3d7]
+14:18:06.508 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@46f699d5 testClass = ProductQuantityServiceTest, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@18518ccf testClass = ProductQuantityServiceTest, locations = '{}', classes = '{class com.example.redis.RedisApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@539d019, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@72437d8d, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@29a0cdb, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@6eb2384f, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@63787180, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@1356d4d4], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -&gt; true]], class annotated with @DirtiesContext [false] with mode [null].
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -215,17 +220,943 @@ expected: 1000L
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v2.6.4)
 
-2022-03-22 18:06:26.481  INFO 5871 --- [    Test worker] c.e.r.s.ProductQuantityServiceTest       : Starting ProductQuantityServiceTest using Java 17.0.2 on LFui-MacBookPro.local with PID 5871 (started by lf in /Users/lf/Works/demo/redis)
-2022-03-22 18:06:26.482  INFO 5871 --- [    Test worker] c.e.r.s.ProductQuantityServiceTest       : No active profile set, falling back to 1 default profile: &quot;default&quot;
-2022-03-22 18:06:26.731  INFO 5871 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2022-03-22 18:06:26.731  INFO 5871 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2022-03-22 18:06:26.842  INFO 5871 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 105 ms. Found 1 Redis repository interfaces.
-2022-03-22 18:06:27.155  WARN 5871 --- [    Test worker] i.n.r.d.DnsServerAddressStreamProviders  : Can not find io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider in the classpath, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS.
-2022-03-22 18:06:27.702  INFO 5871 --- [    Test worker] c.e.r.s.ProductQuantityServiceTest       : Started ProductQuantityServiceTest in 1.349 seconds (JVM running for 1.895)
-2022-03-22 18:06:28.116  INFO 5871 --- [pool-2-thread-1] c.e.r.service.ProductQuantityService     : ===&gt; pool-2-thread-1-stockedQuantity:0
-2022-03-22 18:06:28.116  INFO 5871 --- [pool-2-thread-2] c.e.r.service.ProductQuantityService     : ===&gt; pool-2-thread-2-stockedQuantity:0
-2022-03-22 18:06:28.136  INFO 5871 --- [pool-2-thread-1] c.e.r.service.ProductQuantityService     : pool-2-thread-1-resVal:10
-2022-03-22 18:06:28.136  INFO 5871 --- [pool-2-thread-2] c.e.r.service.ProductQuantityService     : pool-2-thread-2-resVal:10
+2022-03-23 14:18:06.640  INFO 43505 --- [    Test worker] c.e.r.s.ProductQuantityServiceTest       : Starting ProductQuantityServiceTest using Java 17.0.2 on LFui-MacBookPro.local with PID 43505 (started by lf in /Users/lf/Works/demo/redis)
+2022-03-23 14:18:06.640  INFO 43505 --- [    Test worker] c.e.r.s.ProductQuantityServiceTest       : No active profile set, falling back to 1 default profile: &quot;default&quot;
+2022-03-23 14:18:06.916  INFO 43505 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-03-23 14:18:06.917  INFO 43505 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-03-23 14:18:06.984  INFO 43505 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 60 ms. Found 1 Redis repository interfaces.
+2022-03-23 14:18:07.080  INFO 43505 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-03-23 14:18:07.081  INFO 43505 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-03-23 14:18:07.087  INFO 43505 --- [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data JPA - Could not safely identify store assignment for repository candidate interface com.example.redis.repository.AvailablePointRedisRepository. If you want this repository to be a JPA repository, consider annotating your entities with one of these annotations: javax.persistence.Entity, javax.persistence.MappedSuperclass (preferred), or consider extending one of the following types with your repository: org.springframework.data.jpa.repository.JpaRepository.
+2022-03-23 14:18:07.087  INFO 43505 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 0 JPA repository interfaces.
+2022-03-23 14:18:07.331  INFO 43505 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-03-23 14:18:07.549  INFO 43505 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-03-23 14:18:07.578  INFO 43505 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-03-23 14:18:07.607  INFO 43505 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.5.Final
+2022-03-23 14:18:07.692  INFO 43505 --- [    Test worker] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-03-23 14:18:07.754  INFO 43505 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-03-23 14:18:07.842  INFO 43505 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-23 14:18:07.846  INFO 43505 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-03-23 14:18:08.158  WARN 43505 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-03-23 14:18:08.529  INFO 43505 --- [    Test worker] c.e.r.s.ProductQuantityServiceTest       : Started ProductQuantityServiceTest in 2.003 seconds (JVM running for 2.501)
+2022-03-23 14:18:08.853  INFO 43505 --- [pool-2-thread-4] c.e.r.service.ProductQuantityService     : pool-2-thread-4-stockedQuantity:0
+2022-03-23 14:18:08.853  INFO 43505 --- [pool-2-thread-3] c.e.r.service.ProductQuantityService     : pool-2-thread-3-stockedQuantity:0
+2022-03-23 14:18:08.853  INFO 43505 --- [ool-2-thread-26] c.e.r.service.ProductQuantityService     : pool-2-thread-26-stockedQuantity:0
+2022-03-23 14:18:08.853  INFO 43505 --- [pool-2-thread-9] c.e.r.service.ProductQuantityService     : pool-2-thread-9-stockedQuantity:0
+2022-03-23 14:18:08.853  INFO 43505 --- [ool-2-thread-22] c.e.r.service.ProductQuantityService     : pool-2-thread-22-stockedQuantity:0
+2022-03-23 14:18:08.853  INFO 43505 --- [ool-2-thread-23] c.e.r.service.ProductQuantityService     : pool-2-thread-23-stockedQuantity:0
+2022-03-23 14:18:08.853  INFO 43505 --- [ool-2-thread-16] c.e.r.service.ProductQuantityService     : pool-2-thread-16-stockedQuantity:0
+2022-03-23 14:18:08.853  INFO 43505 --- [ool-2-thread-24] c.e.r.service.ProductQuantityService     : pool-2-thread-24-stockedQuantity:0
+2022-03-23 14:18:08.854  INFO 43505 --- [ool-2-thread-17] c.e.r.service.ProductQuantityService     : pool-2-thread-17-stockedQuantity:0
+2022-03-23 14:18:08.854  INFO 43505 --- [ool-2-thread-20] c.e.r.service.ProductQuantityService     : pool-2-thread-20-stockedQuantity:0
+2022-03-23 14:18:08.854  INFO 43505 --- [ool-2-thread-12] c.e.r.service.ProductQuantityService     : pool-2-thread-12-stockedQuantity:0
+2022-03-23 14:18:08.854  INFO 43505 --- [ool-2-thread-11] c.e.r.service.ProductQuantityService     : pool-2-thread-11-stockedQuantity:0
+2022-03-23 14:18:08.854  INFO 43505 --- [ool-2-thread-21] c.e.r.service.ProductQuantityService     : pool-2-thread-21-stockedQuantity:0
+2022-03-23 14:18:08.854  INFO 43505 --- [ool-2-thread-28] c.e.r.service.ProductQuantityService     : pool-2-thread-28-stockedQuantity:0
+2022-03-23 14:18:08.854  INFO 43505 --- [ool-2-thread-10] c.e.r.service.ProductQuantityService     : pool-2-thread-10-stockedQuantity:0
+2022-03-23 14:18:08.853  INFO 43505 --- [ool-2-thread-29] c.e.r.service.ProductQuantityService     : pool-2-thread-29-stockedQuantity:0
+2022-03-23 14:18:08.853  INFO 43505 --- [ool-2-thread-30] c.e.r.service.ProductQuantityService     : pool-2-thread-30-stockedQuantity:0
+2022-03-23 14:18:08.853  INFO 43505 --- [pool-2-thread-8] c.e.r.service.ProductQuantityService     : pool-2-thread-8-stockedQuantity:0
+2022-03-23 14:18:08.853  INFO 43505 --- [pool-2-thread-5] c.e.r.service.ProductQuantityService     : pool-2-thread-5-stockedQuantity:0
+2022-03-23 14:18:08.853  INFO 43505 --- [pool-2-thread-7] c.e.r.service.ProductQuantityService     : pool-2-thread-7-stockedQuantity:0
+2022-03-23 14:18:08.853  INFO 43505 --- [ool-2-thread-14] c.e.r.service.ProductQuantityService     : pool-2-thread-14-stockedQuantity:0
+2022-03-23 14:18:08.854  INFO 43505 --- [pool-2-thread-6] c.e.r.service.ProductQuantityService     : pool-2-thread-6-stockedQuantity:0
+2022-03-23 14:18:08.855  INFO 43505 --- [ool-2-thread-25] c.e.r.service.ProductQuantityService     : pool-2-thread-25-stockedQuantity:0
+2022-03-23 14:18:08.855  INFO 43505 --- [ool-2-thread-15] c.e.r.service.ProductQuantityService     : pool-2-thread-15-stockedQuantity:0
+2022-03-23 14:18:08.854  INFO 43505 --- [ool-2-thread-27] c.e.r.service.ProductQuantityService     : pool-2-thread-27-stockedQuantity:0
+2022-03-23 14:18:08.854  INFO 43505 --- [ool-2-thread-19] c.e.r.service.ProductQuantityService     : pool-2-thread-19-stockedQuantity:0
+2022-03-23 14:18:08.856  INFO 43505 --- [pool-2-thread-9] c.e.r.service.ProductQuantityService     : pool-2-thread-9-resVal:30
+2022-03-23 14:18:08.856  INFO 43505 --- [pool-2-thread-3] c.e.r.service.ProductQuantityService     : pool-2-thread-3-resVal:20
+2022-03-23 14:18:08.856  INFO 43505 --- [ool-2-thread-26] c.e.r.service.ProductQuantityService     : pool-2-thread-26-resVal:40
+2022-03-23 14:18:08.856  INFO 43505 --- [ool-2-thread-22] c.e.r.service.ProductQuantityService     : pool-2-thread-22-resVal:50
+2022-03-23 14:18:08.856  INFO 43505 --- [ool-2-thread-16] c.e.r.service.ProductQuantityService     : pool-2-thread-16-resVal:70
+2022-03-23 14:18:08.854  INFO 43505 --- [ool-2-thread-18] c.e.r.service.ProductQuantityService     : pool-2-thread-18-stockedQuantity:0
+2022-03-23 14:18:08.854  INFO 43505 --- [pool-2-thread-2] c.e.r.service.ProductQuantityService     : pool-2-thread-2-stockedQuantity:0
+2022-03-23 14:18:08.854  INFO 43505 --- [ool-2-thread-13] c.e.r.service.ProductQuantityService     : pool-2-thread-13-stockedQuantity:0
+2022-03-23 14:18:08.856  INFO 43505 --- [pool-2-thread-1] c.e.r.service.ProductQuantityService     : pool-2-thread-1-stockedQuantity:0
+2022-03-23 14:18:08.857  INFO 43505 --- [ool-2-thread-28] c.e.r.service.ProductQuantityService     : pool-2-thread-28-resVal:140
+2022-03-23 14:18:08.857  INFO 43505 --- [ool-2-thread-29] c.e.r.service.ProductQuantityService     : pool-2-thread-29-resVal:160
+2022-03-23 14:18:08.857  INFO 43505 --- [pool-2-thread-5] c.e.r.service.ProductQuantityService     : pool-2-thread-5-resVal:190
+2022-03-23 14:18:08.857  INFO 43505 --- [ool-2-thread-14] c.e.r.service.ProductQuantityService     : pool-2-thread-14-resVal:210
+2022-03-23 14:18:08.857  INFO 43505 --- [pool-2-thread-7] c.e.r.service.ProductQuantityService     : pool-2-thread-7-resVal:200
+2022-03-23 14:18:08.856  INFO 43505 --- [pool-2-thread-4] c.e.r.service.ProductQuantityService     : pool-2-thread-4-resVal:10
+2022-03-23 14:18:08.857  INFO 43505 --- [ool-2-thread-17] c.e.r.service.ProductQuantityService     : pool-2-thread-17-resVal:90
+2022-03-23 14:18:08.856  INFO 43505 --- [ool-2-thread-23] c.e.r.service.ProductQuantityService     : pool-2-thread-23-resVal:60
+2022-03-23 14:18:08.857  INFO 43505 --- [ool-2-thread-11] c.e.r.service.ProductQuantityService     : pool-2-thread-11-resVal:120
+2022-03-23 14:18:08.857  INFO 43505 --- [ool-2-thread-12] c.e.r.service.ProductQuantityService     : pool-2-thread-12-resVal:110
+2022-03-23 14:18:08.857  INFO 43505 --- [ool-2-thread-21] c.e.r.service.ProductQuantityService     : pool-2-thread-21-resVal:130
+2022-03-23 14:18:08.857  INFO 43505 --- [ool-2-thread-24] c.e.r.service.ProductQuantityService     : pool-2-thread-24-resVal:80
+2022-03-23 14:18:08.857  INFO 43505 --- [ool-2-thread-10] c.e.r.service.ProductQuantityService     : pool-2-thread-10-resVal:150
+2022-03-23 14:18:08.857  INFO 43505 --- [pool-2-thread-8] c.e.r.service.ProductQuantityService     : pool-2-thread-8-resVal:180
+2022-03-23 14:18:08.857  INFO 43505 --- [ool-2-thread-30] c.e.r.service.ProductQuantityService     : pool-2-thread-30-resVal:170
+2022-03-23 14:18:08.857  INFO 43505 --- [ool-2-thread-20] c.e.r.service.ProductQuantityService     : pool-2-thread-20-resVal:100
+2022-03-23 14:18:08.860  INFO 43505 --- [pool-2-thread-6] c.e.r.service.ProductQuantityService     : pool-2-thread-6-resVal:220
+2022-03-23 14:18:08.860  INFO 43505 --- [ool-2-thread-27] c.e.r.service.ProductQuantityService     : pool-2-thread-27-resVal:250
+2022-03-23 14:18:08.860  INFO 43505 --- [pool-2-thread-9] c.e.r.service.ProductQuantityService     : pool-2-thread-9-stockedQuantity:260
+2022-03-23 14:18:08.860  INFO 43505 --- [ool-2-thread-15] c.e.r.service.ProductQuantityService     : pool-2-thread-15-resVal:240
+2022-03-23 14:18:08.860  INFO 43505 --- [ool-2-thread-26] c.e.r.service.ProductQuantityService     : pool-2-thread-26-stockedQuantity:260
+2022-03-23 14:18:08.860  INFO 43505 --- [ool-2-thread-25] c.e.r.service.ProductQuantityService     : pool-2-thread-25-resVal:230
+2022-03-23 14:18:08.861  INFO 43505 --- [ool-2-thread-14] c.e.r.service.ProductQuantityService     : pool-2-thread-14-stockedQuantity:300
+2022-03-23 14:18:08.861  INFO 43505 --- [ool-2-thread-17] c.e.r.service.ProductQuantityService     : pool-2-thread-17-stockedQuantity:300
+2022-03-23 14:18:08.861  INFO 43505 --- [ool-2-thread-11] c.e.r.service.ProductQuantityService     : pool-2-thread-11-stockedQuantity:300
+2022-03-23 14:18:08.860  INFO 43505 --- [ool-2-thread-19] c.e.r.service.ProductQuantityService     : pool-2-thread-19-resVal:260
+2022-03-23 14:18:08.861  INFO 43505 --- [ool-2-thread-10] c.e.r.service.ProductQuantityService     : pool-2-thread-10-stockedQuantity:300
+2022-03-23 14:18:08.860  INFO 43505 --- [pool-2-thread-3] c.e.r.service.ProductQuantityService     : pool-2-thread-3-stockedQuantity:260
+2022-03-23 14:18:08.860  INFO 43505 --- [pool-2-thread-1] c.e.r.service.ProductQuantityService     : pool-2-thread-1-resVal:300
+2022-03-23 14:18:08.860  INFO 43505 --- [ool-2-thread-22] c.e.r.service.ProductQuantityService     : pool-2-thread-22-stockedQuantity:260
+2022-03-23 14:18:08.860  INFO 43505 --- [ool-2-thread-16] c.e.r.service.ProductQuantityService     : pool-2-thread-16-stockedQuantity:260
+2022-03-23 14:18:08.862  INFO 43505 --- [ool-2-thread-27] c.e.r.service.ProductQuantityService     : pool-2-thread-27-stockedQuantity:310
+2022-03-23 14:18:08.863  INFO 43505 --- [ool-2-thread-30] c.e.r.service.ProductQuantityService     : pool-2-thread-30-stockedQuantity:300
+2022-03-23 14:18:08.863  INFO 43505 --- [ool-2-thread-20] c.e.r.service.ProductQuantityService     : pool-2-thread-20-stockedQuantity:300
+2022-03-23 14:18:08.863  INFO 43505 --- [ool-2-thread-15] c.e.r.service.ProductQuantityService     : pool-2-thread-15-stockedQuantity:310
+2022-03-23 14:18:08.860  INFO 43505 --- [ool-2-thread-18] c.e.r.service.ProductQuantityService     : pool-2-thread-18-resVal:270
+2022-03-23 14:18:08.863  INFO 43505 --- [pool-2-thread-8] c.e.r.service.ProductQuantityService     : pool-2-thread-8-stockedQuantity:300
+2022-03-23 14:18:08.860  INFO 43505 --- [pool-2-thread-2] c.e.r.service.ProductQuantityService     : pool-2-thread-2-resVal:280
+2022-03-23 14:18:08.860  INFO 43505 --- [ool-2-thread-13] c.e.r.service.ProductQuantityService     : pool-2-thread-13-resVal:290
+2022-03-23 14:18:08.861  INFO 43505 --- [ool-2-thread-28] c.e.r.service.ProductQuantityService     : pool-2-thread-28-stockedQuantity:300
+2022-03-23 14:18:08.861  INFO 43505 --- [pool-2-thread-5] c.e.r.service.ProductQuantityService     : pool-2-thread-5-stockedQuantity:300
+2022-03-23 14:18:08.861  INFO 43505 --- [pool-2-thread-7] c.e.r.service.ProductQuantityService     : pool-2-thread-7-stockedQuantity:300
+2022-03-23 14:18:08.861  INFO 43505 --- [ool-2-thread-29] c.e.r.service.ProductQuantityService     : pool-2-thread-29-stockedQuantity:300
+2022-03-23 14:18:08.861  INFO 43505 --- [pool-2-thread-4] c.e.r.service.ProductQuantityService     : pool-2-thread-4-stockedQuantity:300
+2022-03-23 14:18:08.861  INFO 43505 --- [ool-2-thread-23] c.e.r.service.ProductQuantityService     : pool-2-thread-23-stockedQuantity:300
+2022-03-23 14:18:08.861  INFO 43505 --- [ool-2-thread-12] c.e.r.service.ProductQuantityService     : pool-2-thread-12-stockedQuantity:300
+2022-03-23 14:18:08.861  INFO 43505 --- [ool-2-thread-21] c.e.r.service.ProductQuantityService     : pool-2-thread-21-stockedQuantity:300
+2022-03-23 14:18:08.861  INFO 43505 --- [ool-2-thread-24] c.e.r.service.ProductQuantityService     : pool-2-thread-24-stockedQuantity:300
+2022-03-23 14:18:08.863  INFO 43505 --- [pool-2-thread-6] c.e.r.service.ProductQuantityService     : pool-2-thread-6-stockedQuantity:300
+2022-03-23 14:18:08.863  INFO 43505 --- [pool-2-thread-9] c.e.r.service.ProductQuantityService     : pool-2-thread-9-resVal:310
+2022-03-23 14:18:08.863  INFO 43505 --- [ool-2-thread-26] c.e.r.service.ProductQuantityService     : pool-2-thread-26-resVal:320
+2022-03-23 14:18:08.865  INFO 43505 --- [ool-2-thread-14] c.e.r.service.ProductQuantityService     : pool-2-thread-14-resVal:330
+2022-03-23 14:18:08.865  INFO 43505 --- [ool-2-thread-11] c.e.r.service.ProductQuantityService     : pool-2-thread-11-resVal:350
+2022-03-23 14:18:08.865  INFO 43505 --- [ool-2-thread-10] c.e.r.service.ProductQuantityService     : pool-2-thread-10-resVal:360
+2022-03-23 14:18:08.865  INFO 43505 --- [ool-2-thread-19] c.e.r.service.ProductQuantityService     : pool-2-thread-19-stockedQuantity:350
+2022-03-23 14:18:08.865  INFO 43505 --- [ool-2-thread-25] c.e.r.service.ProductQuantityService     : pool-2-thread-25-stockedQuantity:320
+2022-03-23 14:18:08.865  INFO 43505 --- [ool-2-thread-22] c.e.r.service.ProductQuantityService     : pool-2-thread-22-resVal:380
+2022-03-23 14:18:08.865  INFO 43505 --- [ool-2-thread-17] c.e.r.service.ProductQuantityService     : pool-2-thread-17-resVal:340
+2022-03-23 14:18:08.865  INFO 43505 --- [pool-2-thread-3] c.e.r.service.ProductQuantityService     : pool-2-thread-3-resVal:370
+2022-03-23 14:18:08.865  INFO 43505 --- [pool-2-thread-1] c.e.r.service.ProductQuantityService     : pool-2-thread-1-stockedQuantity:370
+2022-03-23 14:18:08.865  INFO 43505 --- [ool-2-thread-16] c.e.r.service.ProductQuantityService     : pool-2-thread-16-resVal:390
+2022-03-23 14:18:08.867  INFO 43505 --- [ool-2-thread-27] c.e.r.service.ProductQuantityService     : pool-2-thread-27-resVal:400
+2022-03-23 14:18:08.867  INFO 43505 --- [pool-2-thread-2] c.e.r.service.ProductQuantityService     : pool-2-thread-2-stockedQuantity:440
+2022-03-23 14:18:08.867  INFO 43505 --- [ool-2-thread-28] c.e.r.service.ProductQuantityService     : pool-2-thread-28-resVal:450
+2022-03-23 14:18:08.867  INFO 43505 --- [pool-2-thread-5] c.e.r.service.ProductQuantityService     : pool-2-thread-5-resVal:460
+2022-03-23 14:18:08.867  INFO 43505 --- [ool-2-thread-29] c.e.r.service.ProductQuantityService     : pool-2-thread-29-resVal:470
+2022-03-23 14:18:08.867  INFO 43505 --- [pool-2-thread-7] c.e.r.service.ProductQuantityService     : pool-2-thread-7-resVal:480
+2022-03-23 14:18:08.867  INFO 43505 --- [pool-2-thread-8] c.e.r.service.ProductQuantityService     : pool-2-thread-8-resVal:440
+2022-03-23 14:18:08.867  INFO 43505 --- [ool-2-thread-23] c.e.r.service.ProductQuantityService     : pool-2-thread-23-resVal:500
+2022-03-23 14:18:08.867  INFO 43505 --- [ool-2-thread-15] c.e.r.service.ProductQuantityService     : pool-2-thread-15-resVal:430
+2022-03-23 14:18:08.867  INFO 43505 --- [ool-2-thread-20] c.e.r.service.ProductQuantityService     : pool-2-thread-20-resVal:420
+2022-03-23 14:18:08.867  INFO 43505 --- [ool-2-thread-18] c.e.r.service.ProductQuantityService     : pool-2-thread-18-stockedQuantity:430
+2022-03-23 14:18:08.867  INFO 43505 --- [ool-2-thread-30] c.e.r.service.ProductQuantityService     : pool-2-thread-30-resVal:410
+2022-03-23 14:18:08.867  INFO 43505 --- [ool-2-thread-12] c.e.r.service.ProductQuantityService     : pool-2-thread-12-resVal:510
+2022-03-23 14:18:08.867  INFO 43505 --- [pool-2-thread-6] c.e.r.service.ProductQuantityService     : pool-2-thread-6-resVal:540
+2022-03-23 14:18:08.867  INFO 43505 --- [ool-2-thread-13] c.e.r.service.ProductQuantityService     : pool-2-thread-13-stockedQuantity:440
+2022-03-23 14:18:08.867  INFO 43505 --- [pool-2-thread-9] c.e.r.service.ProductQuantityService     : pool-2-thread-9-stockedQuantity:540
+2022-03-23 14:18:08.867  INFO 43505 --- [ool-2-thread-26] c.e.r.service.ProductQuantityService     : pool-2-thread-26-stockedQuantity:540
+2022-03-23 14:18:08.867  INFO 43505 --- [pool-2-thread-4] c.e.r.service.ProductQuantityService     : pool-2-thread-4-resVal:490
+2022-03-23 14:18:08.867  INFO 43505 --- [ool-2-thread-21] c.e.r.service.ProductQuantityService     : pool-2-thread-21-resVal:520
+2022-03-23 14:18:08.868  INFO 43505 --- [ool-2-thread-14] c.e.r.service.ProductQuantityService     : pool-2-thread-14-stockedQuantity:540
+2022-03-23 14:18:08.868  INFO 43505 --- [ool-2-thread-11] c.e.r.service.ProductQuantityService     : pool-2-thread-11-stockedQuantity:540
+2022-03-23 14:18:08.868  INFO 43505 --- [ool-2-thread-10] c.e.r.service.ProductQuantityService     : pool-2-thread-10-stockedQuantity:540
+2022-03-23 14:18:08.867  INFO 43505 --- [ool-2-thread-24] c.e.r.service.ProductQuantityService     : pool-2-thread-24-resVal:530
+2022-03-23 14:18:08.868  INFO 43505 --- [ool-2-thread-22] c.e.r.service.ProductQuantityService     : pool-2-thread-22-stockedQuantity:560
+2022-03-23 14:18:08.868  INFO 43505 --- [ool-2-thread-25] c.e.r.service.ProductQuantityService     : pool-2-thread-25-resVal:560
+2022-03-23 14:18:08.869  INFO 43505 --- [pool-2-thread-1] c.e.r.service.ProductQuantityService     : pool-2-thread-1-resVal:570
+2022-03-23 14:18:08.869  INFO 43505 --- [pool-2-thread-2] c.e.r.service.ProductQuantityService     : pool-2-thread-2-resVal:580
+2022-03-23 14:18:08.869  INFO 43505 --- [ool-2-thread-27] c.e.r.service.ProductQuantityService     : pool-2-thread-27-stockedQuantity:580
+2022-03-23 14:18:08.869  INFO 43505 --- [ool-2-thread-28] c.e.r.service.ProductQuantityService     : pool-2-thread-28-stockedQuantity:580
+2022-03-23 14:18:08.869  INFO 43505 --- [ool-2-thread-17] c.e.r.service.ProductQuantityService     : pool-2-thread-17-stockedQuantity:560
+2022-03-23 14:18:08.868  INFO 43505 --- [ool-2-thread-19] c.e.r.service.ProductQuantityService     : pool-2-thread-19-resVal:550
+2022-03-23 14:18:08.869  INFO 43505 --- [pool-2-thread-3] c.e.r.service.ProductQuantityService     : pool-2-thread-3-stockedQuantity:560
+2022-03-23 14:18:08.869  INFO 43505 --- [ool-2-thread-16] c.e.r.service.ProductQuantityService     : pool-2-thread-16-stockedQuantity:570
+2022-03-23 14:18:08.869  INFO 43505 --- [pool-2-thread-5] c.e.r.service.ProductQuantityService     : pool-2-thread-5-stockedQuantity:580
+2022-03-23 14:18:08.872  INFO 43505 --- [ool-2-thread-29] c.e.r.service.ProductQuantityService     : pool-2-thread-29-stockedQuantity:580
+2022-03-23 14:18:08.873  INFO 43505 --- [ool-2-thread-23] c.e.r.service.ProductQuantityService     : pool-2-thread-23-stockedQuantity:580
+2022-03-23 14:18:08.872  INFO 43505 --- [pool-2-thread-7] c.e.r.service.ProductQuantityService     : pool-2-thread-7-stockedQuantity:580
+2022-03-23 14:18:08.873  INFO 43505 --- [pool-2-thread-8] c.e.r.service.ProductQuantityService     : pool-2-thread-8-stockedQuantity:580
+2022-03-23 14:18:08.873  INFO 43505 --- [ool-2-thread-15] c.e.r.service.ProductQuantityService     : pool-2-thread-15-stockedQuantity:580
+2022-03-23 14:18:08.873  INFO 43505 --- [ool-2-thread-20] c.e.r.service.ProductQuantityService     : pool-2-thread-20-stockedQuantity:580
+2022-03-23 14:18:08.874  INFO 43505 --- [ool-2-thread-17] c.e.r.service.ProductQuantityService     : pool-2-thread-17-resVal:690
+2022-03-23 14:18:08.874  INFO 43505 --- [pool-2-thread-1] c.e.r.service.ProductQuantityService     : pool-2-thread-1-stockedQuantity:680
+2022-03-23 14:18:08.877  INFO 43505 --- [ool-2-thread-19] c.e.r.service.ProductQuantityService     : pool-2-thread-19-stockedQuantity:690
+2022-03-23 14:18:08.877  INFO 43505 --- [pool-2-thread-3] c.e.r.service.ProductQuantityService     : pool-2-thread-3-resVal:700
+2022-03-23 14:18:08.877  INFO 43505 --- [ool-2-thread-16] c.e.r.service.ProductQuantityService     : pool-2-thread-16-resVal:720
+2022-03-23 14:18:08.877  INFO 43505 --- [ool-2-thread-29] c.e.r.service.ProductQuantityService     : pool-2-thread-29-resVal:730
+2022-03-23 14:18:08.874  INFO 43505 --- [pool-2-thread-2] c.e.r.service.ProductQuantityService     : pool-2-thread-2-stockedQuantity:660
+2022-03-23 14:18:08.877  INFO 43505 --- [pool-2-thread-5] c.e.r.service.ProductQuantityService     : pool-2-thread-5-resVal:710
+2022-03-23 14:18:08.874  INFO 43505 --- [ool-2-thread-27] c.e.r.service.ProductQuantityService     : pool-2-thread-27-resVal:670
+2022-03-23 14:18:08.877  INFO 43505 --- [pool-2-thread-8] c.e.r.service.ProductQuantityService     : pool-2-thread-8-resVal:760
+2022-03-23 14:18:08.874  INFO 43505 --- [ool-2-thread-28] c.e.r.service.ProductQuantityService     : pool-2-thread-28-resVal:680
+2022-03-23 14:18:08.878  INFO 43505 --- [ool-2-thread-15] c.e.r.service.ProductQuantityService     : pool-2-thread-15-resVal:770
+2022-03-23 14:18:08.877  INFO 43505 --- [ool-2-thread-23] c.e.r.service.ProductQuantityService     : pool-2-thread-23-resVal:740
+2022-03-23 14:18:08.877  INFO 43505 --- [pool-2-thread-7] c.e.r.service.ProductQuantityService     : pool-2-thread-7-resVal:750
+2022-03-23 14:18:08.874  INFO 43505 --- [ool-2-thread-25] c.e.r.service.ProductQuantityService     : pool-2-thread-25-stockedQuantity:660
+2022-03-23 14:18:08.878  INFO 43505 --- [ool-2-thread-20] c.e.r.service.ProductQuantityService     : pool-2-thread-20-resVal:780
+2022-03-23 14:18:08.874  INFO 43505 --- [ool-2-thread-22] c.e.r.service.ProductQuantityService     : pool-2-thread-22-resVal:660
+2022-03-23 14:18:08.874  INFO 43505 --- [ool-2-thread-11] c.e.r.service.ProductQuantityService     : pool-2-thread-11-resVal:640
+2022-03-23 14:18:08.874  INFO 43505 --- [ool-2-thread-10] c.e.r.service.ProductQuantityService     : pool-2-thread-10-resVal:650
+2022-03-23 14:18:08.874  INFO 43505 --- [pool-2-thread-9] c.e.r.service.ProductQuantityService     : pool-2-thread-9-resVal:610
+2022-03-23 14:18:08.874  INFO 43505 --- [pool-2-thread-4] c.e.r.service.ProductQuantityService     : pool-2-thread-4-stockedQuantity:620
+2022-03-23 14:18:08.874  INFO 43505 --- [ool-2-thread-24] c.e.r.service.ProductQuantityService     : pool-2-thread-24-stockedQuantity:660
+2022-03-23 14:18:08.874  INFO 43505 --- [ool-2-thread-14] c.e.r.service.ProductQuantityService     : pool-2-thread-14-resVal:630
+2022-03-23 14:18:08.874  INFO 43505 --- [ool-2-thread-21] c.e.r.service.ProductQuantityService     : pool-2-thread-21-stockedQuantity:630
+2022-03-23 14:18:08.874  INFO 43505 --- [ool-2-thread-26] c.e.r.service.ProductQuantityService     : pool-2-thread-26-resVal:620
+2022-03-23 14:18:08.874  INFO 43505 --- [pool-2-thread-6] c.e.r.service.ProductQuantityService     : pool-2-thread-6-stockedQuantity:590
+2022-03-23 14:18:08.874  INFO 43505 --- [ool-2-thread-13] c.e.r.service.ProductQuantityService     : pool-2-thread-13-resVal:600
+2022-03-23 14:18:08.874  INFO 43505 --- [ool-2-thread-30] c.e.r.service.ProductQuantityService     : pool-2-thread-30-stockedQuantity:590
+2022-03-23 14:18:08.874  INFO 43505 --- [ool-2-thread-12] c.e.r.service.ProductQuantityService     : pool-2-thread-12-stockedQuantity:590
+2022-03-23 14:18:08.874  INFO 43505 --- [ool-2-thread-18] c.e.r.service.ProductQuantityService     : pool-2-thread-18-resVal:590
+2022-03-23 14:18:08.880  INFO 43505 --- [ool-2-thread-19] c.e.r.service.ProductQuantityService     : pool-2-thread-19-resVal:800
+2022-03-23 14:18:08.880  INFO 43505 --- [ool-2-thread-20] c.e.r.service.ProductQuantityService     : pool-2-thread-20-stockedQuantity:820
+2022-03-23 14:18:08.880  INFO 43505 --- [pool-2-thread-3] c.e.r.service.ProductQuantityService     : pool-2-thread-3-stockedQuantity:800
+2022-03-23 14:18:08.880  INFO 43505 --- [ool-2-thread-16] c.e.r.service.ProductQuantityService     : pool-2-thread-16-stockedQuantity:800
+2022-03-23 14:18:08.880  INFO 43505 --- [pool-2-thread-2] c.e.r.service.ProductQuantityService     : pool-2-thread-2-resVal:810
+2022-03-23 14:18:08.880  INFO 43505 --- [ool-2-thread-17] c.e.r.service.ProductQuantityService     : pool-2-thread-17-stockedQuantity:800
+2022-03-23 14:18:08.881  INFO 43505 --- [ool-2-thread-29] c.e.r.service.ProductQuantityService     : pool-2-thread-29-stockedQuantity:800
+2022-03-23 14:18:08.881  INFO 43505 --- [ool-2-thread-27] c.e.r.service.ProductQuantityService     : pool-2-thread-27-stockedQuantity:810
+2022-03-23 14:18:08.881  INFO 43505 --- [pool-2-thread-8] c.e.r.service.ProductQuantityService     : pool-2-thread-8-stockedQuantity:810
+2022-03-23 14:18:08.881  INFO 43505 --- [ool-2-thread-10] c.e.r.service.ProductQuantityService     : pool-2-thread-10-stockedQuantity:820
+2022-03-23 14:18:08.881  INFO 43505 --- [ool-2-thread-28] c.e.r.service.ProductQuantityService     : pool-2-thread-28-stockedQuantity:810
+2022-03-23 14:18:08.881  INFO 43505 --- [ool-2-thread-23] c.e.r.service.ProductQuantityService     : pool-2-thread-23-stockedQuantity:810
+2022-03-23 14:18:08.881  INFO 43505 --- [ool-2-thread-25] c.e.r.service.ProductQuantityService     : pool-2-thread-25-resVal:820
+2022-03-23 14:18:08.880  INFO 43505 --- [pool-2-thread-5] c.e.r.service.ProductQuantityService     : pool-2-thread-5-stockedQuantity:800
+2022-03-23 14:18:08.880  INFO 43505 --- [pool-2-thread-1] c.e.r.service.ProductQuantityService     : pool-2-thread-1-resVal:790
+2022-03-23 14:18:08.882  INFO 43505 --- [ool-2-thread-11] c.e.r.service.ProductQuantityService     : pool-2-thread-11-stockedQuantity:820
+2022-03-23 14:18:08.881  INFO 43505 --- [ool-2-thread-22] c.e.r.service.ProductQuantityService     : pool-2-thread-22-stockedQuantity:820
+2022-03-23 14:18:08.881  INFO 43505 --- [ool-2-thread-15] c.e.r.service.ProductQuantityService     : pool-2-thread-15-stockedQuantity:810
+2022-03-23 14:18:08.882  INFO 43505 --- [ool-2-thread-21] c.e.r.service.ProductQuantityService     : pool-2-thread-21-resVal:850
+2022-03-23 14:18:08.882  INFO 43505 --- [ool-2-thread-14] c.e.r.service.ProductQuantityService     : pool-2-thread-14-stockedQuantity:850
+2022-03-23 14:18:08.882  INFO 43505 --- [pool-2-thread-6] c.e.r.service.ProductQuantityService     : pool-2-thread-6-resVal:860
+2022-03-23 14:18:08.881  INFO 43505 --- [pool-2-thread-4] c.e.r.service.ProductQuantityService     : pool-2-thread-4-resVal:830
+2022-03-23 14:18:08.882  INFO 43505 --- [pool-2-thread-7] c.e.r.service.ProductQuantityService     : pool-2-thread-7-stockedQuantity:820
+2022-03-23 14:18:08.882  INFO 43505 --- [ool-2-thread-24] c.e.r.service.ProductQuantityService     : pool-2-thread-24-resVal:840
+2022-03-23 14:18:08.882  INFO 43505 --- [pool-2-thread-9] c.e.r.service.ProductQuantityService     : pool-2-thread-9-stockedQuantity:830
+2022-03-23 14:18:08.883  INFO 43505 --- [ool-2-thread-13] c.e.r.service.ProductQuantityService     : pool-2-thread-13-stockedQuantity:860
+2022-03-23 14:18:08.883  INFO 43505 --- [ool-2-thread-30] c.e.r.service.ProductQuantityService     : pool-2-thread-30-resVal:870
+2022-03-23 14:18:08.882  INFO 43505 --- [ool-2-thread-26] c.e.r.service.ProductQuantityService     : pool-2-thread-26-stockedQuantity:850
+2022-03-23 14:18:08.883  INFO 43505 --- [ool-2-thread-19] c.e.r.service.ProductQuantityService     : pool-2-thread-19-stockedQuantity:880
+2022-03-23 14:18:08.883  INFO 43505 --- [ool-2-thread-20] c.e.r.service.ProductQuantityService     : pool-2-thread-20-resVal:890
+2022-03-23 14:18:08.883  INFO 43505 --- [ool-2-thread-18] c.e.r.service.ProductQuantityService     : pool-2-thread-18-stockedQuantity:880
+2022-03-23 14:18:08.883  INFO 43505 --- [ool-2-thread-12] c.e.r.service.ProductQuantityService     : pool-2-thread-12-resVal:880
+2022-03-23 14:18:08.884  INFO 43505 --- [pool-2-thread-3] c.e.r.service.ProductQuantityService     : pool-2-thread-3-resVal:900
+2022-03-23 14:18:08.884  INFO 43505 --- [ool-2-thread-16] c.e.r.service.ProductQuantityService     : pool-2-thread-16-resVal:910
+2022-03-23 14:18:08.884  INFO 43505 --- [ool-2-thread-17] c.e.r.service.ProductQuantityService     : pool-2-thread-17-resVal:920
+2022-03-23 14:18:08.884  INFO 43505 --- [pool-2-thread-2] c.e.r.service.ProductQuantityService     : pool-2-thread-2-stockedQuantity:910
+2022-03-23 14:18:08.884  INFO 43505 --- [ool-2-thread-27] c.e.r.service.ProductQuantityService     : pool-2-thread-27-resVal:940
+2022-03-23 14:18:08.884  INFO 43505 --- [ool-2-thread-23] c.e.r.service.ProductQuantityService     : pool-2-thread-23-resVal:980
+2022-03-23 14:18:08.884  INFO 43505 --- [ool-2-thread-29] c.e.r.service.ProductQuantityService     : pool-2-thread-29-resVal:930
+2022-03-23 14:18:08.884  INFO 43505 --- [pool-2-thread-5] c.e.r.service.ProductQuantityService     : pool-2-thread-5-resVal:990
+2022-03-23 14:18:08.884  INFO 43505 --- [ool-2-thread-25] c.e.r.service.ProductQuantityService     : pool-2-thread-25-stockedQuantity:990
+2022-03-23 14:18:08.884  INFO 43505 --- [pool-2-thread-8] c.e.r.service.ProductQuantityService     : pool-2-thread-8-resVal:950
+2022-03-23 14:18:08.884  INFO 43505 --- [ool-2-thread-28] c.e.r.service.ProductQuantityService     : pool-2-thread-28-resVal:960
+2022-03-23 14:18:08.884  INFO 43505 --- [ool-2-thread-10] c.e.r.service.ProductQuantityService     : pool-2-thread-10-resVal:970
+2022-03-23 14:18:08.885  INFO 43505 --- [pool-2-thread-1] c.e.r.service.ProductQuantityService     : pool-2-thread-1-stockedQuantity:990
+2022-03-23 14:18:08.886  INFO 43505 --- [ool-2-thread-14] c.e.r.service.ProductQuantityService     : pool-2-thread-14-resVal:1030
+2022-03-23 14:18:08.886  INFO 43505 --- [pool-2-thread-6] c.e.r.service.ProductQuantityService     : pool-2-thread-6-stockedQuantity:1030
+2022-03-23 14:18:08.886  INFO 43505 --- [pool-2-thread-4] c.e.r.service.ProductQuantityService     : pool-2-thread-4-stockedQuantity:1030
+2022-03-23 14:18:08.886  INFO 43505 --- [ool-2-thread-24] c.e.r.service.ProductQuantityService     : pool-2-thread-24-stockedQuantity:1040
+2022-03-23 14:18:08.886  INFO 43505 --- [pool-2-thread-7] c.e.r.service.ProductQuantityService     : pool-2-thread-7-resVal:1040
+2022-03-23 14:18:08.886  INFO 43505 --- [ool-2-thread-13] c.e.r.service.ProductQuantityService     : pool-2-thread-13-resVal:1060
+2022-03-23 14:18:08.885  INFO 43505 --- [ool-2-thread-22] c.e.r.service.ProductQuantityService     : pool-2-thread-22-resVal:1010
+2022-03-23 14:18:08.886  INFO 43505 --- [ool-2-thread-15] c.e.r.service.ProductQuantityService     : pool-2-thread-15-resVal:1020
+2022-03-23 14:18:08.886  INFO 43505 --- [ool-2-thread-21] c.e.r.service.ProductQuantityService     : pool-2-thread-21-stockedQuantity:1030
+2022-03-23 14:18:08.886  INFO 43505 --- [pool-2-thread-9] c.e.r.service.ProductQuantityService     : pool-2-thread-9-resVal:1050
+2022-03-23 14:18:08.885  INFO 43505 --- [ool-2-thread-11] c.e.r.service.ProductQuantityService     : pool-2-thread-11-resVal:1000
+2022-03-23 14:18:08.887  INFO 43505 --- [ool-2-thread-30] c.e.r.service.ProductQuantityService     : pool-2-thread-30-stockedQuantity:1060
+2022-03-23 14:18:08.887  INFO 43505 --- [ool-2-thread-18] c.e.r.service.ProductQuantityService     : pool-2-thread-18-resVal:1090
+2022-03-23 14:18:08.887  INFO 43505 --- [ool-2-thread-12] c.e.r.service.ProductQuantityService     : pool-2-thread-12-stockedQuantity:1090
+2022-03-23 14:18:08.887  INFO 43505 --- [ool-2-thread-20] c.e.r.service.ProductQuantityService     : pool-2-thread-20-stockedQuantity:1080
+2022-03-23 14:18:08.887  INFO 43505 --- [ool-2-thread-27] c.e.r.service.ProductQuantityService     : pool-2-thread-27-stockedQuantity:1090
+2022-03-23 14:18:08.887  INFO 43505 --- [pool-2-thread-2] c.e.r.service.ProductQuantityService     : pool-2-thread-2-resVal:1100
+2022-03-23 14:18:08.887  INFO 43505 --- [ool-2-thread-29] c.e.r.service.ProductQuantityService     : pool-2-thread-29-stockedQuantity:1090
+2022-03-23 14:18:08.888  INFO 43505 --- [ool-2-thread-10] c.e.r.service.ProductQuantityService     : pool-2-thread-10-stockedQuantity:1110
+2022-03-23 14:18:08.887  INFO 43505 --- [ool-2-thread-19] c.e.r.service.ProductQuantityService     : pool-2-thread-19-resVal:1080
+2022-03-23 14:18:08.887  INFO 43505 --- [ool-2-thread-26] c.e.r.service.ProductQuantityService     : pool-2-thread-26-resVal:1070
+2022-03-23 14:18:08.888  INFO 43505 --- [pool-2-thread-8] c.e.r.service.ProductQuantityService     : pool-2-thread-8-stockedQuantity:1110
+2022-03-23 14:18:08.887  INFO 43505 --- [pool-2-thread-3] c.e.r.service.ProductQuantityService     : pool-2-thread-3-stockedQuantity:1090
+2022-03-23 14:18:08.888  INFO 43505 --- [ool-2-thread-31] c.e.r.service.ProductQuantityService     : pool-2-thread-31-stockedQuantity:1120
+2022-03-23 14:18:08.888  INFO 43505 --- [ool-2-thread-35] c.e.r.service.ProductQuantityService     : pool-2-thread-35-stockedQuantity:1120
+2022-03-23 14:18:08.887  INFO 43505 --- [ool-2-thread-16] c.e.r.service.ProductQuantityService     : pool-2-thread-16-stockedQuantity:1090
+2022-03-23 14:18:08.887  INFO 43505 --- [ool-2-thread-17] c.e.r.service.ProductQuantityService     : pool-2-thread-17-stockedQuantity:1090
+2022-03-23 14:18:08.887  INFO 43505 --- [ool-2-thread-23] c.e.r.service.ProductQuantityService     : pool-2-thread-23-stockedQuantity:1090
+2022-03-23 14:18:08.887  INFO 43505 --- [ool-2-thread-25] c.e.r.service.ProductQuantityService     : pool-2-thread-25-resVal:1110
+2022-03-23 14:18:08.887  INFO 43505 --- [pool-2-thread-5] c.e.r.service.ProductQuantityService     : pool-2-thread-5-stockedQuantity:1100
+2022-03-23 14:18:08.888  INFO 43505 --- [ool-2-thread-28] c.e.r.service.ProductQuantityService     : pool-2-thread-28-stockedQuantity:1110
+2022-03-23 14:18:08.889  INFO 43505 --- [ool-2-thread-34] c.e.r.service.ProductQuantityService     : pool-2-thread-34-stockedQuantity:1120
+2022-03-23 14:18:08.888  INFO 43505 --- [pool-2-thread-1] c.e.r.service.ProductQuantityService     : pool-2-thread-1-resVal:1120
+2022-03-23 14:18:08.890  INFO 43505 --- [ool-2-thread-42] c.e.r.service.ProductQuantityService     : pool-2-thread-42-stockedQuantity:1120
+2022-03-23 14:18:08.889  INFO 43505 --- [ool-2-thread-11] c.e.r.service.ProductQuantityService     : pool-2-thread-11-stockedQuantity:1120
+2022-03-23 14:18:08.889  INFO 43505 --- [ool-2-thread-38] c.e.r.service.ProductQuantityService     : pool-2-thread-38-stockedQuantity:1120
+2022-03-23 14:18:08.891  INFO 43505 --- [ool-2-thread-52] c.e.r.service.ProductQuantityService     : pool-2-thread-52-stockedQuantity:1120
+2022-03-23 14:18:08.891  INFO 43505 --- [ool-2-thread-55] c.e.r.service.ProductQuantityService     : pool-2-thread-55-stockedQuantity:1120
+2022-03-23 14:18:08.892  INFO 43505 --- [ool-2-thread-33] c.e.r.service.ProductQuantityService     : pool-2-thread-33-stockedQuantity:1120
+2022-03-23 14:18:08.893  INFO 43505 --- [ool-2-thread-60] c.e.r.service.ProductQuantityService     : pool-2-thread-60-stockedQuantity:1120
+2022-03-23 14:18:08.894  INFO 43505 --- [ool-2-thread-36] c.e.r.service.ProductQuantityService     : pool-2-thread-36-stockedQuantity:1120
+2022-03-23 14:18:08.894  INFO 43505 --- [ool-2-thread-61] c.e.r.service.ProductQuantityService     : pool-2-thread-61-stockedQuantity:1120
+2022-03-23 14:18:08.894  INFO 43505 --- [ool-2-thread-50] c.e.r.service.ProductQuantityService     : pool-2-thread-50-stockedQuantity:1120
+2022-03-23 14:18:08.894  INFO 43505 --- [ool-2-thread-66] c.e.r.service.ProductQuantityService     : pool-2-thread-66-stockedQuantity:1120
+2022-03-23 14:18:08.894  INFO 43505 --- [ool-2-thread-44] c.e.r.service.ProductQuantityService     : pool-2-thread-44-stockedQuantity:1120
+2022-03-23 14:18:08.904  INFO 43505 --- [ool-2-thread-56] c.e.r.service.ProductQuantityService     : pool-2-thread-56-stockedQuantity:1120
+2022-03-23 14:18:08.905  INFO 43505 --- [ool-2-thread-37] c.e.r.service.ProductQuantityService     : pool-2-thread-37-stockedQuantity:1120
+2022-03-23 14:18:08.905  INFO 43505 --- [ool-2-thread-58] c.e.r.service.ProductQuantityService     : pool-2-thread-58-stockedQuantity:1120
+2022-03-23 14:18:08.905  INFO 43505 --- [ool-2-thread-32] c.e.r.service.ProductQuantityService     : pool-2-thread-32-stockedQuantity:1120
+2022-03-23 14:18:08.905  INFO 43505 --- [ool-2-thread-39] c.e.r.service.ProductQuantityService     : pool-2-thread-39-stockedQuantity:1120
+2022-03-23 14:18:08.905  INFO 43505 --- [ool-2-thread-69] c.e.r.service.ProductQuantityService     : pool-2-thread-69-stockedQuantity:1120
+2022-03-23 14:18:08.905  INFO 43505 --- [ool-2-thread-64] c.e.r.service.ProductQuantityService     : pool-2-thread-64-stockedQuantity:1120
+2022-03-23 14:18:08.905  INFO 43505 --- [ool-2-thread-46] c.e.r.service.ProductQuantityService     : pool-2-thread-46-stockedQuantity:1120
+2022-03-23 14:18:08.905  INFO 43505 --- [ool-2-thread-68] c.e.r.service.ProductQuantityService     : pool-2-thread-68-stockedQuantity:1120
+2022-03-23 14:18:08.905  INFO 43505 --- [ool-2-thread-47] c.e.r.service.ProductQuantityService     : pool-2-thread-47-stockedQuantity:1120
+2022-03-23 14:18:08.904  INFO 43505 --- [ool-2-thread-54] c.e.r.service.ProductQuantityService     : pool-2-thread-54-stockedQuantity:1120
+2022-03-23 14:18:08.905  INFO 43505 --- [ool-2-thread-51] c.e.r.service.ProductQuantityService     : pool-2-thread-51-stockedQuantity:1120
+2022-03-23 14:18:08.905  INFO 43505 --- [ool-2-thread-43] c.e.r.service.ProductQuantityService     : pool-2-thread-43-stockedQuantity:1120
+2022-03-23 14:18:08.905  INFO 43505 --- [ool-2-thread-62] c.e.r.service.ProductQuantityService     : pool-2-thread-62-stockedQuantity:1120
+2022-03-23 14:18:08.905  INFO 43505 --- [ool-2-thread-73] c.e.r.service.ProductQuantityService     : pool-2-thread-73-stockedQuantity:1120
+2022-03-23 14:18:08.905  INFO 43505 --- [ool-2-thread-59] c.e.r.service.ProductQuantityService     : pool-2-thread-59-stockedQuantity:1120
+2022-03-23 14:18:08.905  INFO 43505 --- [ool-2-thread-67] c.e.r.service.ProductQuantityService     : pool-2-thread-67-stockedQuantity:1120
+2022-03-23 14:18:08.905  INFO 43505 --- [ool-2-thread-72] c.e.r.service.ProductQuantityService     : pool-2-thread-72-stockedQuantity:1120
+2022-03-23 14:18:08.905  INFO 43505 --- [ool-2-thread-40] c.e.r.service.ProductQuantityService     : pool-2-thread-40-stockedQuantity:1120
+2022-03-23 14:18:08.905  INFO 43505 --- [ool-2-thread-49] c.e.r.service.ProductQuantityService     : pool-2-thread-49-stockedQuantity:1120
+2022-03-23 14:18:08.906  INFO 43505 --- [ool-2-thread-63] c.e.r.service.ProductQuantityService     : pool-2-thread-63-stockedQuantity:1120
+2022-03-23 14:18:08.906  INFO 43505 --- [ool-2-thread-70] c.e.r.service.ProductQuantityService     : pool-2-thread-70-stockedQuantity:1120
+2022-03-23 14:18:08.905  INFO 43505 --- [ool-2-thread-65] c.e.r.service.ProductQuantityService     : pool-2-thread-65-stockedQuantity:1120
+2022-03-23 14:18:08.906  INFO 43505 --- [ool-2-thread-74] c.e.r.service.ProductQuantityService     : pool-2-thread-74-stockedQuantity:1120
+2022-03-23 14:18:08.905  INFO 43505 --- [ool-2-thread-45] c.e.r.service.ProductQuantityService     : pool-2-thread-45-stockedQuantity:1120
+2022-03-23 14:18:08.905  INFO 43505 --- [ool-2-thread-57] c.e.r.service.ProductQuantityService     : pool-2-thread-57-stockedQuantity:1120
+2022-03-23 14:18:08.905  INFO 43505 --- [ool-2-thread-48] c.e.r.service.ProductQuantityService     : pool-2-thread-48-stockedQuantity:1120
+2022-03-23 14:18:08.908  INFO 43505 --- [ool-2-thread-41] c.e.r.service.ProductQuantityService     : pool-2-thread-41-stockedQuantity:1120
+2022-03-23 14:18:08.908  INFO 43505 --- [ool-2-thread-85] c.e.r.service.ProductQuantityService     : pool-2-thread-85-stockedQuantity:1120
+2022-03-23 14:18:08.908  INFO 43505 --- [ool-2-thread-89] c.e.r.service.ProductQuantityService     : pool-2-thread-89-stockedQuantity:1120
+2022-03-23 14:18:08.909  INFO 43505 --- [ool-2-thread-93] c.e.r.service.ProductQuantityService     : pool-2-thread-93-stockedQuantity:1120
+2022-03-23 14:18:08.909  INFO 43505 --- [ool-2-thread-96] c.e.r.service.ProductQuantityService     : pool-2-thread-96-stockedQuantity:1120
+2022-03-23 14:18:08.909  INFO 43505 --- [ool-2-thread-99] c.e.r.service.ProductQuantityService     : pool-2-thread-99-stockedQuantity:1120
+2022-03-23 14:18:08.910  INFO 43505 --- [ool-2-thread-53] c.e.r.service.ProductQuantityService     : pool-2-thread-53-stockedQuantity:1120
+2022-03-23 14:18:08.910  INFO 43505 --- [ool-2-thread-76] c.e.r.service.ProductQuantityService     : pool-2-thread-76-stockedQuantity:1120
+2022-03-23 14:18:08.910  INFO 43505 --- [ool-2-thread-77] c.e.r.service.ProductQuantityService     : pool-2-thread-77-stockedQuantity:1120
+2022-03-23 14:18:08.911  INFO 43505 --- [ool-2-thread-80] c.e.r.service.ProductQuantityService     : pool-2-thread-80-stockedQuantity:1120
+2022-03-23 14:18:08.911  INFO 43505 --- [ool-2-thread-81] c.e.r.service.ProductQuantityService     : pool-2-thread-81-stockedQuantity:1120
+2022-03-23 14:18:08.911  INFO 43505 --- [ool-2-thread-82] c.e.r.service.ProductQuantityService     : pool-2-thread-82-stockedQuantity:1120
+2022-03-23 14:18:08.911  INFO 43505 --- [ool-2-thread-86] c.e.r.service.ProductQuantityService     : pool-2-thread-86-stockedQuantity:1120
+2022-03-23 14:18:08.911  INFO 43505 --- [ol-2-thread-105] c.e.r.service.ProductQuantityService     : pool-2-thread-105-stockedQuantity:1120
+2022-03-23 14:18:08.912  INFO 43505 --- [ool-2-thread-88] c.e.r.service.ProductQuantityService     : pool-2-thread-88-stockedQuantity:1120
+2022-03-23 14:18:08.912  INFO 43505 --- [ool-2-thread-90] c.e.r.service.ProductQuantityService     : pool-2-thread-90-stockedQuantity:1120
+2022-03-23 14:18:08.914  INFO 43505 --- [ool-2-thread-91] c.e.r.service.ProductQuantityService     : pool-2-thread-91-stockedQuantity:1120
+2022-03-23 14:18:08.914  INFO 43505 --- [ool-2-thread-94] c.e.r.service.ProductQuantityService     : pool-2-thread-94-stockedQuantity:1120
+2022-03-23 14:18:08.914  INFO 43505 --- [ool-2-thread-95] c.e.r.service.ProductQuantityService     : pool-2-thread-95-stockedQuantity:1120
+2022-03-23 14:18:08.915  INFO 43505 --- [ol-2-thread-115] c.e.r.service.ProductQuantityService     : pool-2-thread-115-stockedQuantity:1120
+2022-03-23 14:18:08.915  INFO 43505 --- [ol-2-thread-100] c.e.r.service.ProductQuantityService     : pool-2-thread-100-stockedQuantity:1120
+2022-03-23 14:18:08.914  INFO 43505 --- [ol-2-thread-110] c.e.r.service.ProductQuantityService     : pool-2-thread-110-stockedQuantity:1120
+2022-03-23 14:18:08.915  INFO 43505 --- [ol-2-thread-101] c.e.r.service.ProductQuantityService     : pool-2-thread-101-stockedQuantity:1120
+2022-03-23 14:18:08.915  INFO 43505 --- [ol-2-thread-116] c.e.r.service.ProductQuantityService     : pool-2-thread-116-stockedQuantity:1120
+2022-03-23 14:18:08.916  INFO 43505 --- [ool-2-thread-79] c.e.r.service.ProductQuantityService     : pool-2-thread-79-stockedQuantity:1120
+2022-03-23 14:18:08.916  INFO 43505 --- [ool-2-thread-84] c.e.r.service.ProductQuantityService     : pool-2-thread-84-stockedQuantity:1120
+2022-03-23 14:18:08.916  INFO 43505 --- [ol-2-thread-104] c.e.r.service.ProductQuantityService     : pool-2-thread-104-stockedQuantity:1120
+2022-03-23 14:18:08.916  INFO 43505 --- [ool-2-thread-87] c.e.r.service.ProductQuantityService     : pool-2-thread-87-stockedQuantity:1120
+2022-03-23 14:18:08.916  INFO 43505 --- [ol-2-thread-108] c.e.r.service.ProductQuantityService     : pool-2-thread-108-stockedQuantity:1120
+</pre>
+</span>
+</div>
+<div id="tab3" class="tab">
+<h2>Standard error</h2>
+<span class="code">
+<pre>Exception in thread &quot;pool-2-thread-14&quot; java.lang.IllegalStateException: [판매수량 오버]
+	at com.example.redis.service.ProductQuantityService.procBuyIncrement(ProductQuantityService.java:80)
+	at com.example.redis.service.ProductQuantityServiceTest.lambda$procBuyIncrement_multiTest$2(ProductQuantityServiceTest.java:108)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Exception in thread &quot;pool-2-thread-7&quot; java.lang.IllegalStateException: [판매수량 오버]
+	at com.example.redis.service.ProductQuantityService.procBuyIncrement(ProductQuantityService.java:80)
+	at com.example.redis.service.ProductQuantityServiceTest.lambda$procBuyIncrement_multiTest$2(ProductQuantityServiceTest.java:108)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Exception in thread &quot;pool-2-thread-15&quot; java.lang.IllegalStateException: [판매수량 오버]
+	at com.example.redis.service.ProductQuantityService.procBuyIncrement(ProductQuantityService.java:80)
+	at com.example.redis.service.ProductQuantityServiceTest.lambda$procBuyIncrement_multiTest$2(ProductQuantityServiceTest.java:108)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Exception in thread &quot;pool-2-thread-24&quot; java.lang.IllegalStateException: [제고부족]
+	at com.example.redis.service.ProductQuantityService.procBuyIncrement(ProductQuantityService.java:71)
+	at com.example.redis.service.ProductQuantityServiceTest.lambda$procBuyIncrement_multiTest$2(ProductQuantityServiceTest.java:108)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Exception in thread &quot;pool-2-thread-18&quot; java.lang.IllegalStateException: [판매수량 오버]
+	at com.example.redis.service.ProductQuantityService.procBuyIncrement(ProductQuantityService.java:80)
+	at com.example.redis.service.ProductQuantityServiceTest.lambda$procBuyIncrement_multiTest$2(ProductQuantityServiceTest.java:108)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Exception in thread &quot;pool-2-thread-3&quot; java.lang.IllegalStateException: [제고부족]
+	at com.example.redis.service.ProductQuantityService.procBuyIncrement(ProductQuantityService.java:71)
+	at com.example.redis.service.ProductQuantityServiceTest.lambda$procBuyIncrement_multiTest$2(ProductQuantityServiceTest.java:108)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Exception in thread &quot;pool-2-thread-16&quot; java.lang.IllegalStateException: [제고부족]
+	at com.example.redis.service.ProductQuantityService.procBuyIncrement(ProductQuantityService.java:71)
+	at com.example.redis.service.ProductQuantityServiceTest.lambda$procBuyIncrement_multiTest$2(ProductQuantityServiceTest.java:108)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Exception in thread &quot;pool-2-thread-4&quot; java.lang.IllegalStateException: [제고부족]
+	at com.example.redis.service.ProductQuantityService.procBuyIncrement(ProductQuantityService.java:71)
+	at com.example.redis.service.ProductQuantityServiceTest.lambda$procBuyIncrement_multiTest$2(ProductQuantityServiceTest.java:108)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Exception in thread &quot;pool-2-thread-28&quot; java.lang.IllegalStateException: [제고부족]
+	at com.example.redis.service.ProductQuantityService.procBuyIncrement(ProductQuantityService.java:71)
+	at com.example.redis.service.ProductQuantityServiceTest.lambda$procBuyIncrement_multiTest$2(ProductQuantityServiceTest.java:108)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Exception in thread &quot;pool-2-thread-34&quot; java.lang.IllegalStateException: [제고부족]
+	at com.example.redis.service.ProductQuantityService.procBuyIncrement(ProductQuantityService.java:71)
+	at com.example.redis.service.ProductQuantityServiceTest.lambda$procBuyIncrement_multiTest$2(ProductQuantityServiceTest.java:108)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Exception in thread &quot;pool-2-thread-20&quot; java.lang.IllegalStateException: [제고부족]
+	at com.example.redis.service.ProductQuantityService.procBuyIncrement(ProductQuantityService.java:71)
+	at com.example.redis.service.ProductQuantityServiceTest.lambda$procBuyIncrement_multiTest$2(ProductQuantityServiceTest.java:108)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Exception in thread &quot;pool-2-thread-52&quot; java.lang.IllegalStateException: [제고부족]
+	at com.example.redis.service.ProductQuantityService.procBuyIncrement(ProductQuantityService.java:71)
+	at com.example.redis.service.ProductQuantityServiceTest.lambda$procBuyIncrement_multiTest$2(ProductQuantityServiceTest.java:108)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Exception in thread &quot;pool-2-thread-13&quot; java.lang.IllegalStateException: [판매수량 오버]
+	at com.example.redis.service.ProductQuantityService.procBuyIncrement(ProductQuantityService.java:80)
+	at com.example.redis.service.ProductQuantityServiceTest.lambda$procBuyIncrement_multiTest$2(ProductQuantityServiceTest.java:108)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Exception in thread &quot;pool-2-thread-26&quot; java.lang.IllegalStateException: [판매수량 오버]
+	at com.example.redis.service.ProductQuantityService.procBuyIncrement(ProductQuantityService.java:80)
+	at com.example.redis.service.ProductQuantityServiceTest.lambda$procBuyIncrement_multiTest$2(ProductQuantityServiceTest.java:108)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Exception in thread &quot;pool-2-thread-8&quot; java.lang.IllegalStateException: [제고부족]
+	at com.example.redis.service.ProductQuantityService.procBuyIncrement(ProductQuantityService.java:71)
+	at com.example.redis.service.ProductQuantityServiceTest.lambda$procBuyIncrement_multiTest$2(ProductQuantityServiceTest.java:108)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Exception in thread &quot;pool-2-thread-6&quot; java.lang.IllegalStateException: [제고부족]
+	at com.example.redis.service.ProductQuantityService.procBuyIncrement(ProductQuantityService.java:71)
+	at com.example.redis.service.ProductQuantityServiceTest.lambda$procBuyIncrement_multiTest$2(ProductQuantityServiceTest.java:108)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Exception in thread &quot;pool-2-thread-35&quot; java.lang.IllegalStateException: [제고부족]
+	at com.example.redis.service.ProductQuantityService.procBuyIncrement(ProductQuantityService.java:71)
+	at com.example.redis.service.ProductQuantityServiceTest.lambda$procBuyIncrement_multiTest$2(ProductQuantityServiceTest.java:108)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Exception in thread &quot;pool-2-thread-22&quot; java.lang.IllegalStateException: [판매수량 오버]
+	at com.example.redis.service.ProductQuantityService.procBuyIncrement(ProductQuantityService.java:80)
+	at com.example.redis.service.ProductQuantityServiceTest.lambda$procBuyIncrement_multiTest$2(ProductQuantityServiceTest.java:108)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Exception in thread &quot;pool-2-thread-17&quot; java.lang.IllegalStateException: [제고부족]
+	at com.example.redis.service.ProductQuantityService.procBuyIncrement(ProductQuantityService.java:71)
+	at com.example.redis.service.ProductQuantityServiceTest.lambda$procBuyIncrement_multiTest$2(ProductQuantityServiceTest.java:108)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Exception in thread &quot;pool-2-thread-25&quot; java.lang.IllegalStateException: [판매수량 오버]
+	at com.example.redis.service.ProductQuantityService.procBuyIncrement(ProductQuantityService.java:80)
+	at com.example.redis.service.ProductQuantityServiceTest.lambda$procBuyIncrement_multiTest$2(ProductQuantityServiceTest.java:108)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Exception in thread &quot;pool-2-thread-21&quot; java.lang.IllegalStateException: [제고부족]
+	at com.example.redis.service.ProductQuantityService.procBuyIncrement(ProductQuantityService.java:71)
+	at com.example.redis.service.ProductQuantityServiceTest.lambda$procBuyIncrement_multiTest$2(ProductQuantityServiceTest.java:108)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Exception in thread &quot;pool-2-thread-9&quot; java.lang.IllegalStateException: [판매수량 오버]
+	at com.example.redis.service.ProductQuantityService.procBuyIncrement(ProductQuantityService.java:80)
+	at com.example.redis.service.ProductQuantityServiceTest.lambda$procBuyIncrement_multiTest$2(ProductQuantityServiceTest.java:108)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Exception in thread &quot;pool-2-thread-12&quot; java.lang.IllegalStateException: [제고부족]
+	at com.example.redis.service.ProductQuantityService.procBuyIncrement(ProductQuantityService.java:71)
+	at com.example.redis.service.ProductQuantityServiceTest.lambda$procBuyIncrement_multiTest$2(ProductQuantityServiceTest.java:108)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Exception in thread &quot;pool-2-thread-60&quot; java.lang.IllegalStateException: [제고부족]
+	at com.example.redis.service.ProductQuantityService.procBuyIncrement(ProductQuantityService.java:71)
+	at com.example.redis.service.ProductQuantityServiceTest.lambda$procBuyIncrement_multiTest$2(ProductQuantityServiceTest.java:108)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Exception in thread &quot;pool-2-thread-1&quot; java.lang.IllegalStateException: [판매수량 오버]
+	at com.example.redis.service.ProductQuantityService.procBuyIncrement(ProductQuantityService.java:80)
+	at com.example.redis.service.ProductQuantityServiceTest.lambda$procBuyIncrement_multiTest$2(ProductQuantityServiceTest.java:108)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Exception in thread &quot;pool-2-thread-11&quot; java.lang.IllegalStateException: [제고부족]
+	at com.example.redis.service.ProductQuantityService.procBuyIncrement(ProductQuantityService.java:71)
+	at com.example.redis.service.ProductQuantityServiceTest.lambda$procBuyIncrement_multiTest$2(ProductQuantityServiceTest.java:108)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Exception in thread &quot;pool-2-thread-2&quot; java.lang.IllegalStateException: [판매수량 오버]
+	at com.example.redis.service.ProductQuantityService.procBuyIncrement(ProductQuantityService.java:80)
+	at com.example.redis.service.ProductQuantityServiceTest.lambda$procBuyIncrement_multiTest$2(ProductQuantityServiceTest.java:108)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Exception in thread &quot;pool-2-thread-55&quot; java.lang.IllegalStateException: [제고부족]
+	at com.example.redis.service.ProductQuantityService.procBuyIncrement(ProductQuantityService.java:71)
+	at com.example.redis.service.ProductQuantityServiceTest.lambda$procBuyIncrement_multiTest$2(ProductQuantityServiceTest.java:108)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Exception in thread &quot;pool-2-thread-19&quot; java.lang.IllegalStateException: [판매수량 오버]
+	at com.example.redis.service.ProductQuantityService.procBuyIncrement(ProductQuantityService.java:80)
+	at com.example.redis.service.ProductQuantityServiceTest.lambda$procBuyIncrement_multiTest$2(ProductQuantityServiceTest.java:108)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Exception in thread &quot;pool-2-thread-50&quot; java.lang.IllegalStateException: [제고부족]
+	at com.example.redis.service.ProductQuantityService.procBuyIncrement(ProductQuantityService.java:71)
+	at com.example.redis.service.ProductQuantityServiceTest.lambda$procBuyIncrement_multiTest$2(ProductQuantityServiceTest.java:108)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Exception in thread &quot;pool-2-thread-33&quot; java.lang.IllegalStateException: [제고부족]
+	at com.example.redis.service.ProductQuantityService.procBuyIncrement(ProductQuantityService.java:71)
+	at com.example.redis.service.ProductQuantityServiceTest.lambda$procBuyIncrement_multiTest$2(ProductQuantityServiceTest.java:108)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Exception in thread &quot;pool-2-thread-23&quot; java.lang.IllegalStateException: [제고부족]
+	at com.example.redis.service.ProductQuantityService.procBuyIncrement(ProductQuantityService.java:71)
+	at com.example.redis.service.ProductQuantityServiceTest.lambda$procBuyIncrement_multiTest$2(ProductQuantityServiceTest.java:108)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Exception in thread &quot;pool-2-thread-27&quot; java.lang.IllegalStateException: [제고부족]
+	at com.example.redis.service.ProductQuantityService.procBuyIncrement(ProductQuantityService.java:71)
+	at com.example.redis.service.ProductQuantityServiceTest.lambda$procBuyIncrement_multiTest$2(ProductQuantityServiceTest.java:108)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Exception in thread &quot;pool-2-thread-38&quot; java.lang.IllegalStateException: [제고부족]
+	at com.example.redis.service.ProductQuantityService.procBuyIncrement(ProductQuantityService.java:71)
+	at com.example.redis.service.ProductQuantityServiceTest.lambda$procBuyIncrement_multiTest$2(ProductQuantityServiceTest.java:108)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Exception in thread &quot;pool-2-thread-29&quot; java.lang.IllegalStateException: [제고부족]
+	at com.example.redis.service.ProductQuantityService.procBuyIncrement(ProductQuantityService.java:71)
+	at com.example.redis.service.ProductQuantityServiceTest.lambda$procBuyIncrement_multiTest$2(ProductQuantityServiceTest.java:108)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Exception in thread &quot;pool-2-thread-10&quot; java.lang.IllegalStateException: [제고부족]
+	at com.example.redis.service.ProductQuantityService.procBuyIncrement(ProductQuantityService.java:71)
+	at com.example.redis.service.ProductQuantityServiceTest.lambda$procBuyIncrement_multiTest$2(ProductQuantityServiceTest.java:108)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Exception in thread &quot;pool-2-thread-66&quot; java.lang.IllegalStateException: [제고부족]
+	at com.example.redis.service.ProductQuantityService.procBuyIncrement(ProductQuantityService.java:71)
+	at com.example.redis.service.ProductQuantityServiceTest.lambda$procBuyIncrement_multiTest$2(ProductQuantityServiceTest.java:108)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Exception in thread &quot;pool-2-thread-5&quot; java.lang.IllegalStateException: [제고부족]
+	at com.example.redis.service.ProductQuantityService.procBuyIncrement(ProductQuantityService.java:71)
+	at com.example.redis.service.ProductQuantityServiceTest.lambda$procBuyIncrement_multiTest$2(ProductQuantityServiceTest.java:108)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Exception in thread &quot;pool-2-thread-42&quot; java.lang.IllegalStateException: [제고부족]
+	at com.example.redis.service.ProductQuantityService.procBuyIncrement(ProductQuantityService.java:71)
+	at com.example.redis.service.ProductQuantityServiceTest.lambda$procBuyIncrement_multiTest$2(ProductQuantityServiceTest.java:108)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Exception in thread &quot;pool-2-thread-36&quot; java.lang.IllegalStateException: [제고부족]
+	at com.example.redis.service.ProductQuantityService.procBuyIncrement(ProductQuantityService.java:71)
+	at com.example.redis.service.ProductQuantityServiceTest.lambda$procBuyIncrement_multiTest$2(ProductQuantityServiceTest.java:108)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Exception in thread &quot;pool-2-thread-44&quot; java.lang.IllegalStateException: [제고부족]
+	at com.example.redis.service.ProductQuantityService.procBuyIncrement(ProductQuantityService.java:71)
+	at com.example.redis.service.ProductQuantityServiceTest.lambda$procBuyIncrement_multiTest$2(ProductQuantityServiceTest.java:108)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Exception in thread &quot;pool-2-thread-30&quot; java.lang.IllegalStateException: [제고부족]
+	at com.example.redis.service.ProductQuantityService.procBuyIncrement(ProductQuantityService.java:71)
+	at com.example.redis.service.ProductQuantityServiceTest.lambda$procBuyIncrement_multiTest$2(ProductQuantityServiceTest.java:108)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Exception in thread &quot;pool-2-thread-54&quot; java.lang.IllegalStateException: [제고부족]
+	at com.example.redis.service.ProductQuantityService.procBuyIncrement(ProductQuantityService.java:71)
+	at com.example.redis.service.ProductQuantityServiceTest.lambda$procBuyIncrement_multiTest$2(ProductQuantityServiceTest.java:108)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Exception in thread &quot;pool-2-thread-73&quot; java.lang.IllegalStateException: [제고부족]
+	at com.example.redis.service.ProductQuantityService.procBuyIncrement(ProductQuantityService.java:71)
+	at com.example.redis.service.ProductQuantityServiceTest.lambda$procBuyIncrement_multiTest$2(ProductQuantityServiceTest.java:108)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Exception in thread &quot;pool-2-thread-40&quot; java.lang.IllegalStateException: [제고부족]
+	at com.example.redis.service.ProductQuantityService.procBuyIncrement(ProductQuantityService.java:71)
+	at com.example.redis.service.ProductQuantityServiceTest.lambda$procBuyIncrement_multiTest$2(ProductQuantityServiceTest.java:108)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Exception in thread &quot;pool-2-thread-70&quot; java.lang.IllegalStateException: [제고부족]
+	at com.example.redis.service.ProductQuantityService.procBuyIncrement(ProductQuantityService.java:71)
+	at com.example.redis.service.ProductQuantityServiceTest.lambda$procBuyIncrement_multiTest$2(ProductQuantityServiceTest.java:108)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Exception in thread &quot;pool-2-thread-45&quot; java.lang.IllegalStateException: [제고부족]
+	at com.example.redis.service.ProductQuantityService.procBuyIncrement(ProductQuantityService.java:71)
+	at com.example.redis.service.ProductQuantityServiceTest.lambda$procBuyIncrement_multiTest$2(ProductQuantityServiceTest.java:108)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Exception in thread &quot;pool-2-thread-31&quot; java.lang.IllegalStateException: [제고부족]
+	at com.example.redis.service.ProductQuantityService.procBuyIncrement(ProductQuantityService.java:71)
+	at com.example.redis.service.ProductQuantityServiceTest.lambda$procBuyIncrement_multiTest$2(ProductQuantityServiceTest.java:108)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Exception in thread &quot;pool-2-thread-37&quot; java.lang.IllegalStateException: [제고부족]
+	at com.example.redis.service.ProductQuantityService.procBuyIncrement(ProductQuantityService.java:71)
+	at com.example.redis.service.ProductQuantityServiceTest.lambda$procBuyIncrement_multiTest$2(ProductQuantityServiceTest.java:108)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Exception in thread &quot;pool-2-thread-58&quot; java.lang.IllegalStateException: [제고부족]
+	at com.example.redis.service.ProductQuantityService.procBuyIncrement(ProductQuantityService.java:71)
+	at com.example.redis.service.ProductQuantityServiceTest.lambda$procBuyIncrement_multiTest$2(ProductQuantityServiceTest.java:108)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Exception in thread &quot;pool-2-thread-69&quot; java.lang.IllegalStateException: [제고부족]
+	at com.example.redis.service.ProductQuantityService.procBuyIncrement(ProductQuantityService.java:71)
+	at com.example.redis.service.ProductQuantityServiceTest.lambda$procBuyIncrement_multiTest$2(ProductQuantityServiceTest.java:108)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Exception in thread &quot;pool-2-thread-64&quot; java.lang.IllegalStateException: [제고부족]
+	at com.example.redis.service.ProductQuantityService.procBuyIncrement(ProductQuantityService.java:71)
+	at com.example.redis.service.ProductQuantityServiceTest.lambda$procBuyIncrement_multiTest$2(ProductQuantityServiceTest.java:108)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Exception in thread &quot;pool-2-thread-46&quot; java.lang.IllegalStateException: [제고부족]
+	at com.example.redis.service.ProductQuantityService.procBuyIncrement(ProductQuantityService.java:71)
+	at com.example.redis.service.ProductQuantityServiceTest.lambda$procBuyIncrement_multiTest$2(ProductQuantityServiceTest.java:108)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Exception in thread &quot;pool-2-thread-51&quot; java.lang.IllegalStateException: [제고부족]
+	at com.example.redis.service.ProductQuantityService.procBuyIncrement(ProductQuantityService.java:71)
+	at com.example.redis.service.ProductQuantityServiceTest.lambda$procBuyIncrement_multiTest$2(ProductQuantityServiceTest.java:108)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Exception in thread &quot;pool-2-thread-93&quot; java.lang.IllegalStateException: [제고부족]
+	at com.example.redis.service.ProductQuantityService.procBuyIncrement(ProductQuantityService.java:71)
+	at com.example.redis.service.ProductQuantityServiceTest.lambda$procBuyIncrement_multiTest$2(ProductQuantityServiceTest.java:108)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Exception in thread &quot;pool-2-thread-62&quot; java.lang.IllegalStateException: [제고부족]
+	at com.example.redis.service.ProductQuantityService.procBuyIncrement(ProductQuantityService.java:71)
+	at com.example.redis.service.ProductQuantityServiceTest.lambda$procBuyIncrement_multiTest$2(ProductQuantityServiceTest.java:108)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Exception in thread &quot;pool-2-thread-59&quot; java.lang.IllegalStateException: [제고부족]
+	at com.example.redis.service.ProductQuantityService.procBuyIncrement(ProductQuantityService.java:71)
+	at com.example.redis.service.ProductQuantityServiceTest.lambda$procBuyIncrement_multiTest$2(ProductQuantityServiceTest.java:108)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Exception in thread &quot;pool-2-thread-67&quot; java.lang.IllegalStateException: [제고부족]
+	at com.example.redis.service.ProductQuantityService.procBuyIncrement(ProductQuantityService.java:71)
+	at com.example.redis.service.ProductQuantityServiceTest.lambda$procBuyIncrement_multiTest$2(ProductQuantityServiceTest.java:108)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Exception in thread &quot;pool-2-thread-77&quot; java.lang.IllegalStateException: [제고부족]
+	at com.example.redis.service.ProductQuantityService.procBuyIncrement(ProductQuantityService.java:71)
+	at com.example.redis.service.ProductQuantityServiceTest.lambda$procBuyIncrement_multiTest$2(ProductQuantityServiceTest.java:108)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Exception in thread &quot;pool-2-thread-49&quot; java.lang.IllegalStateException: [제고부족]
+	at com.example.redis.service.ProductQuantityService.procBuyIncrement(ProductQuantityService.java:71)
+	at com.example.redis.service.ProductQuantityServiceTest.lambda$procBuyIncrement_multiTest$2(ProductQuantityServiceTest.java:108)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Exception in thread &quot;pool-2-thread-63&quot; java.lang.IllegalStateException: [제고부족]
+	at com.example.redis.service.ProductQuantityService.procBuyIncrement(ProductQuantityService.java:71)
+	at com.example.redis.service.ProductQuantityServiceTest.lambda$procBuyIncrement_multiTest$2(ProductQuantityServiceTest.java:108)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Exception in thread &quot;pool-2-thread-105&quot; java.lang.IllegalStateException: [제고부족]
+	at com.example.redis.service.ProductQuantityService.procBuyIncrement(ProductQuantityService.java:71)
+	at com.example.redis.service.ProductQuantityServiceTest.lambda$procBuyIncrement_multiTest$2(ProductQuantityServiceTest.java:108)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Exception in thread &quot;pool-2-thread-57&quot; java.lang.IllegalStateException: [제고부족]
+	at com.example.redis.service.ProductQuantityService.procBuyIncrement(ProductQuantityService.java:71)
+	at com.example.redis.service.ProductQuantityServiceTest.lambda$procBuyIncrement_multiTest$2(ProductQuantityServiceTest.java:108)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Exception in thread &quot;pool-2-thread-48&quot; java.lang.IllegalStateException: [제고부족]
+	at com.example.redis.service.ProductQuantityService.procBuyIncrement(ProductQuantityService.java:71)
+	at com.example.redis.service.ProductQuantityServiceTest.lambda$procBuyIncrement_multiTest$2(ProductQuantityServiceTest.java:108)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Exception in thread &quot;pool-2-thread-88&quot; java.lang.IllegalStateException: [제고부족]
+	at com.example.redis.service.ProductQuantityService.procBuyIncrement(ProductQuantityService.java:71)
+	at com.example.redis.service.ProductQuantityServiceTest.lambda$procBuyIncrement_multiTest$2(ProductQuantityServiceTest.java:108)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Exception in thread &quot;pool-2-thread-39&quot; java.lang.IllegalStateException: [제고부족]
+	at com.example.redis.service.ProductQuantityService.procBuyIncrement(ProductQuantityService.java:71)
+	at com.example.redis.service.ProductQuantityServiceTest.lambda$procBuyIncrement_multiTest$2(ProductQuantityServiceTest.java:108)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Exception in thread &quot;pool-2-thread-89&quot; java.lang.IllegalStateException: [제고부족]
+	at com.example.redis.service.ProductQuantityService.procBuyIncrement(ProductQuantityService.java:71)
+	at com.example.redis.service.ProductQuantityServiceTest.lambda$procBuyIncrement_multiTest$2(ProductQuantityServiceTest.java:108)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Exception in thread &quot;pool-2-thread-47&quot; java.lang.IllegalStateException: [제고부족]
+	at com.example.redis.service.ProductQuantityService.procBuyIncrement(ProductQuantityService.java:71)
+	at com.example.redis.service.ProductQuantityServiceTest.lambda$procBuyIncrement_multiTest$2(ProductQuantityServiceTest.java:108)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Exception in thread &quot;pool-2-thread-43&quot; java.lang.IllegalStateException: [제고부족]
+	at com.example.redis.service.ProductQuantityService.procBuyIncrement(ProductQuantityService.java:71)
+	at com.example.redis.service.ProductQuantityServiceTest.lambda$procBuyIncrement_multiTest$2(ProductQuantityServiceTest.java:108)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Exception in thread &quot;pool-2-thread-53&quot; java.lang.IllegalStateException: [제고부족]
+	at com.example.redis.service.ProductQuantityService.procBuyIncrement(ProductQuantityService.java:71)
+	at com.example.redis.service.ProductQuantityServiceTest.lambda$procBuyIncrement_multiTest$2(ProductQuantityServiceTest.java:108)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Exception in thread &quot;pool-2-thread-91&quot; java.lang.IllegalStateException: [제고부족]
+	at com.example.redis.service.ProductQuantityService.procBuyIncrement(ProductQuantityService.java:71)
+	at com.example.redis.service.ProductQuantityServiceTest.lambda$procBuyIncrement_multiTest$2(ProductQuantityServiceTest.java:108)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Exception in thread &quot;pool-2-thread-100&quot; java.lang.IllegalStateException: [제고부족]
+	at com.example.redis.service.ProductQuantityService.procBuyIncrement(ProductQuantityService.java:71)
+	at com.example.redis.service.ProductQuantityServiceTest.lambda$procBuyIncrement_multiTest$2(ProductQuantityServiceTest.java:108)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Exception in thread &quot;pool-2-thread-101&quot; java.lang.IllegalStateException: [제고부족]
+	at com.example.redis.service.ProductQuantityService.procBuyIncrement(ProductQuantityService.java:71)
+	at com.example.redis.service.ProductQuantityServiceTest.lambda$procBuyIncrement_multiTest$2(ProductQuantityServiceTest.java:108)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Exception in thread &quot;pool-2-thread-61&quot; java.lang.IllegalStateException: [제고부족]
+	at com.example.redis.service.ProductQuantityService.procBuyIncrement(ProductQuantityService.java:71)
+	at com.example.redis.service.ProductQuantityServiceTest.lambda$procBuyIncrement_multiTest$2(ProductQuantityServiceTest.java:108)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Exception in thread &quot;pool-2-thread-116&quot; java.lang.IllegalStateException: [제고부족]
+	at com.example.redis.service.ProductQuantityService.procBuyIncrement(ProductQuantityService.java:71)
+	at com.example.redis.service.ProductQuantityServiceTest.lambda$procBuyIncrement_multiTest$2(ProductQuantityServiceTest.java:108)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Exception in thread &quot;pool-2-thread-56&quot; java.lang.IllegalStateException: [제고부족]
+	at com.example.redis.service.ProductQuantityService.procBuyIncrement(ProductQuantityService.java:71)
+	at com.example.redis.service.ProductQuantityServiceTest.lambda$procBuyIncrement_multiTest$2(ProductQuantityServiceTest.java:108)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Exception in thread &quot;pool-2-thread-41&quot; java.lang.IllegalStateException: [제고부족]
+	at com.example.redis.service.ProductQuantityService.procBuyIncrement(ProductQuantityService.java:71)
+	at com.example.redis.service.ProductQuantityServiceTest.lambda$procBuyIncrement_multiTest$2(ProductQuantityServiceTest.java:108)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Exception in thread &quot;pool-2-thread-85&quot; java.lang.IllegalStateException: [제고부족]
+	at com.example.redis.service.ProductQuantityService.procBuyIncrement(ProductQuantityService.java:71)
+	at com.example.redis.service.ProductQuantityServiceTest.lambda$procBuyIncrement_multiTest$2(ProductQuantityServiceTest.java:108)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Exception in thread &quot;pool-2-thread-104&quot; java.lang.IllegalStateException: [제고부족]
+	at com.example.redis.service.ProductQuantityService.procBuyIncrement(ProductQuantityService.java:71)
+	at com.example.redis.service.ProductQuantityServiceTest.lambda$procBuyIncrement_multiTest$2(ProductQuantityServiceTest.java:108)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Exception in thread &quot;pool-2-thread-96&quot; java.lang.IllegalStateException: [제고부족]
+	at com.example.redis.service.ProductQuantityService.procBuyIncrement(ProductQuantityService.java:71)
+	at com.example.redis.service.ProductQuantityServiceTest.lambda$procBuyIncrement_multiTest$2(ProductQuantityServiceTest.java:108)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Exception in thread &quot;pool-2-thread-72&quot; java.lang.IllegalStateException: [제고부족]
+	at com.example.redis.service.ProductQuantityService.procBuyIncrement(ProductQuantityService.java:71)
+	at com.example.redis.service.ProductQuantityServiceTest.lambda$procBuyIncrement_multiTest$2(ProductQuantityServiceTest.java:108)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Exception in thread &quot;pool-2-thread-76&quot; java.lang.IllegalStateException: [제고부족]
+	at com.example.redis.service.ProductQuantityService.procBuyIncrement(ProductQuantityService.java:71)
+	at com.example.redis.service.ProductQuantityServiceTest.lambda$procBuyIncrement_multiTest$2(ProductQuantityServiceTest.java:108)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Exception in thread &quot;pool-2-thread-95&quot; java.lang.IllegalStateException: [제고부족]
+	at com.example.redis.service.ProductQuantityService.procBuyIncrement(ProductQuantityService.java:71)
+	at com.example.redis.service.ProductQuantityServiceTest.lambda$procBuyIncrement_multiTest$2(ProductQuantityServiceTest.java:108)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Exception in thread &quot;pool-2-thread-80&quot; java.lang.IllegalStateException: [제고부족]
+	at com.example.redis.service.ProductQuantityService.procBuyIncrement(ProductQuantityService.java:71)
+	at com.example.redis.service.ProductQuantityServiceTest.lambda$procBuyIncrement_multiTest$2(ProductQuantityServiceTest.java:108)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Exception in thread &quot;pool-2-thread-81&quot; java.lang.IllegalStateException: [제고부족]
+	at com.example.redis.service.ProductQuantityService.procBuyIncrement(ProductQuantityService.java:71)
+	at com.example.redis.service.ProductQuantityServiceTest.lambda$procBuyIncrement_multiTest$2(ProductQuantityServiceTest.java:108)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Exception in thread &quot;pool-2-thread-82&quot; java.lang.IllegalStateException: [제고부족]
+	at com.example.redis.service.ProductQuantityService.procBuyIncrement(ProductQuantityService.java:71)
+	at com.example.redis.service.ProductQuantityServiceTest.lambda$procBuyIncrement_multiTest$2(ProductQuantityServiceTest.java:108)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Exception in thread &quot;pool-2-thread-110&quot; java.lang.IllegalStateException: [제고부족]
+	at com.example.redis.service.ProductQuantityService.procBuyIncrement(ProductQuantityService.java:71)
+	at com.example.redis.service.ProductQuantityServiceTest.lambda$procBuyIncrement_multiTest$2(ProductQuantityServiceTest.java:108)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Exception in thread &quot;pool-2-thread-74&quot; java.lang.IllegalStateException: [제고부족]
+	at com.example.redis.service.ProductQuantityService.procBuyIncrement(ProductQuantityService.java:71)
+	at com.example.redis.service.ProductQuantityServiceTest.lambda$procBuyIncrement_multiTest$2(ProductQuantityServiceTest.java:108)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Exception in thread &quot;pool-2-thread-90&quot; java.lang.IllegalStateException: [제고부족]
+	at com.example.redis.service.ProductQuantityService.procBuyIncrement(ProductQuantityService.java:71)
+	at com.example.redis.service.ProductQuantityServiceTest.lambda$procBuyIncrement_multiTest$2(ProductQuantityServiceTest.java:108)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Exception in thread &quot;pool-2-thread-79&quot; java.lang.IllegalStateException: [제고부족]
+	at com.example.redis.service.ProductQuantityService.procBuyIncrement(ProductQuantityService.java:71)
+	at com.example.redis.service.ProductQuantityServiceTest.lambda$procBuyIncrement_multiTest$2(ProductQuantityServiceTest.java:108)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Exception in thread &quot;pool-2-thread-84&quot; java.lang.IllegalStateException: [제고부족]
+	at com.example.redis.service.ProductQuantityService.procBuyIncrement(ProductQuantityService.java:71)
+	at com.example.redis.service.ProductQuantityServiceTest.lambda$procBuyIncrement_multiTest$2(ProductQuantityServiceTest.java:108)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Exception in thread &quot;pool-2-thread-108&quot; java.lang.IllegalStateException: [제고부족]
+	at com.example.redis.service.ProductQuantityService.procBuyIncrement(ProductQuantityService.java:71)
+	at com.example.redis.service.ProductQuantityServiceTest.lambda$procBuyIncrement_multiTest$2(ProductQuantityServiceTest.java:108)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Exception in thread &quot;pool-2-thread-65&quot; java.lang.IllegalStateException: [제고부족]
+	at com.example.redis.service.ProductQuantityService.procBuyIncrement(ProductQuantityService.java:71)
+	at com.example.redis.service.ProductQuantityServiceTest.lambda$procBuyIncrement_multiTest$2(ProductQuantityServiceTest.java:108)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Exception in thread &quot;pool-2-thread-115&quot; java.lang.IllegalStateException: [제고부족]
+	at com.example.redis.service.ProductQuantityService.procBuyIncrement(ProductQuantityService.java:71)
+	at com.example.redis.service.ProductQuantityServiceTest.lambda$procBuyIncrement_multiTest$2(ProductQuantityServiceTest.java:108)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Exception in thread &quot;pool-2-thread-32&quot; java.lang.IllegalStateException: [제고부족]
+	at com.example.redis.service.ProductQuantityService.procBuyIncrement(ProductQuantityService.java:71)
+	at com.example.redis.service.ProductQuantityServiceTest.lambda$procBuyIncrement_multiTest$2(ProductQuantityServiceTest.java:108)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Exception in thread &quot;pool-2-thread-68&quot; java.lang.IllegalStateException: [제고부족]
+	at com.example.redis.service.ProductQuantityService.procBuyIncrement(ProductQuantityService.java:71)
+	at com.example.redis.service.ProductQuantityServiceTest.lambda$procBuyIncrement_multiTest$2(ProductQuantityServiceTest.java:108)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Exception in thread &quot;pool-2-thread-87&quot; java.lang.IllegalStateException: [제고부족]
+	at com.example.redis.service.ProductQuantityService.procBuyIncrement(ProductQuantityService.java:71)
+	at com.example.redis.service.ProductQuantityServiceTest.lambda$procBuyIncrement_multiTest$2(ProductQuantityServiceTest.java:108)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Exception in thread &quot;pool-2-thread-99&quot; java.lang.IllegalStateException: [제고부족]
+	at com.example.redis.service.ProductQuantityService.procBuyIncrement(ProductQuantityService.java:71)
+	at com.example.redis.service.ProductQuantityServiceTest.lambda$procBuyIncrement_multiTest$2(ProductQuantityServiceTest.java:108)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Exception in thread &quot;pool-2-thread-94&quot; java.lang.IllegalStateException: [제고부족]
+	at com.example.redis.service.ProductQuantityService.procBuyIncrement(ProductQuantityService.java:71)
+	at com.example.redis.service.ProductQuantityServiceTest.lambda$procBuyIncrement_multiTest$2(ProductQuantityServiceTest.java:108)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Exception in thread &quot;pool-2-thread-86&quot; java.lang.IllegalStateException: [제고부족]
+	at com.example.redis.service.ProductQuantityService.procBuyIncrement(ProductQuantityService.java:71)
+	at com.example.redis.service.ProductQuantityServiceTest.lambda$procBuyIncrement_multiTest$2(ProductQuantityServiceTest.java:108)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
 </pre>
 </span>
 </div>
@@ -237,7 +1168,7 @@ expected: 1000L
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 7.4</a> at 2022. 3. 22. 오후 6:06:29</p>
+<a href="http://www.gradle.org">Gradle 7.4</a> at 2022. 3. 23. 오후 2:18:10</p>
 </div>
 </div>
 </body>
