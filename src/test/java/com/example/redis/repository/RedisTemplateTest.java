@@ -102,7 +102,8 @@ public class RedisTemplateTest {
 
         // 추가 후 5초 후 삭제 됨
         valueOperations.set(key, val);
-        valueOperations.getAndExpire(key, 5, TimeUnit.SECONDS);
+        stringRedisTemplate.expire(key, 5, TimeUnit.SECONDS);
+//        valueOperations.getAndExpire(key, 5, TimeUnit.SECONDS);
         assertThat(valueOperations.get(key)).isEqualTo(val);
 
         Thread.sleep(5000L);
@@ -120,8 +121,9 @@ public class RedisTemplateTest {
 
         // 추가 후 5초 후 삭제 됨
         valueOperations.set(key, val);
-        valueOperations.getAndExpire(key, timeout);
-        assertThat(valueOperations.get(key)).isEqualTo(val);
+        String resVal = valueOperations.getAndExpire(key, timeout);
+//        stringRedisTemplate.expire(key, timeout);
+        assertThat(resVal).isEqualTo(val);
 
         Thread.sleep(5000L);
 
