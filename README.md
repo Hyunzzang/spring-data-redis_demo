@@ -42,4 +42,4 @@
 * [Incr Decr Template 샘플](./src/test/java/com/example/redis/repository/IncrRedisTemplateTest.java)
 
 ## 4. 테스트
-* [상품재고 관련 테스트] (./src/test/java/com/example/redis/repository/ProductQuantityServiceTest.java)
+* [상품재고 관련 테스트](./src/test/java/com/example/redis/repository/ProductQuantityServiceTest.java)
