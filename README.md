@@ -40,3 +40,6 @@
 ## 3. RedisTemplate 사용
 * [RedisTemplate 샘플](./src/test/java/com/example/redis/repository/RedisTemplateTest.java)
 * [Incr Decr Template 샘플](./src/test/java/com/example/redis/repository/IncrRedisTemplateTest.java)
+
+## 4. 테스트
+* [상품재고 관련 테스트] (./src/test/java/com/example/redis/repository/ProductQuantityServiceTest.java)
